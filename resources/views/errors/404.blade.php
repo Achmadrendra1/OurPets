@@ -68,7 +68,7 @@
                 The page you’re looking for isn’t found. We<br class="d-sm-block d-none"> suggest you Back to Homepage.
             </p>
             <div class="d-flex justify-content-center">
-                <a class="btn btn-back d-inline-flex text-white border-0" href="/">
+                <a class="btn btn-back d-inline-flex text-white border-0" href="..\index.php">
                     Back to Homepage
                 </a>
             </div>

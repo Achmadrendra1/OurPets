@@ -40,7 +40,7 @@
           </ul>
           <div class="d-flex">
             <a class="btn btn-login text-white" href="login">Login</a>
-            <a class="btn btn-register btn-fill text-white" href="#">Register</a>
+            <a class="btn btn-register btn-fill text-white" href="register">Register</a>
           </div>
          
         </div>
@@ -55,7 +55,7 @@
                 Make a New
             </h1>
             <h1 class="accent-text">
-                FRIEND
+                Friends
             </h1>
             <h1 class="heading-text2">
                 With Us
