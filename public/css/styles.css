@@ -55,15 +55,12 @@ section.hero {
     justify-content: space-between;
     width: 100%;
     background-color: #004aad;
-    padding-top: 0;
 }
 
 .img-hero {
     position: absolute;
     right: 0;
     padding-right: 7rem;
-    top: 0;
-    padding-top: 4rem;
 }
 
 .hero .btn-get-started {
@@ -162,3 +159,45 @@ section.footer {
     background-color: #004aad;
     padding: 50px;
 }
+/* Login Page */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body.login {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+.tit-login {
+    color: #004aad;
+    font-size: 32pt;
+    font-weight: 900;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+/* Akhir Login */

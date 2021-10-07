@@ -38,7 +38,7 @@
             </li>
           </ul>
           <div class="d-flex">
-            <a class="btn btn-login text-white" href="Login">Login</a>
+            <a class="btn btn-login text-white" href="login">Login</a>
             <a class="btn btn-register btn-fill text-white" href="#">Register</a>
           </div>
          
@@ -62,9 +62,9 @@
             <div class="p-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </div>
-            <button class="btn btn-get-started text-white">
+            <a class="btn btn-get-started text-white" href="login">
                 Get Started
-            </button>
+            </a>
        </div>
        <div class="img-hero">
            <img src="Images/Hero.svg" width="441.54" height="600">
