@@ -248,37 +248,65 @@ haven't thought of.
                         0.6 Km
                             </div>
                         </div>
-                </div>
-               <div class="col-3">
-               <div class="card bg-dark text-white">
-                <img src="https://media.istockphoto.com/photos/cute-kitten-licking-glass-table-with-copy-space-picture-id1293763250?b=1&k=20&m=1293763250&s=170667a&w=0&h=zcK63xxkMVX-ca0d5laTsDxauVUMH62F71MKcbqaGnI=" height="350" class="card-img" alt="...">
-            <div class="card-img-overlay">
-             <h5 class="card-title">Greyi</h5>
-             <p class="card-category-age">Cat | Adult</p>
-             <p class="card-distance">500 m</p>
             </div>
-                </div>
-               </div>
-               <div class="col-3">
-               <div class="card bg-dark text-white">
-                <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="350" class="card-img" alt="...">
-            <div class="card-img-overlay">
-             <h5 class="card-title">Greyi</h5>
-             <p class="card-category-age">Cat | Adult</p>
-             <p class="card-distance">500 m</p>
+           <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height = "300px" class="card-img" />
+                    </div>
+
+                    <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                            </div>
+                        </div>
             </div>
-                </div>
-               </div>
-               <div class="col-3">
-               <div class="card bg-dark text-white">
-                <img src="Images/Foot.svg" height="350">
-            <div class="card-img-overlay">
-             <h5 class="card-title">Greyi</h5>
-             <p class="card-category-age">Cat | Adult</p>
-             <p class="card-distance">500 m</p>
+           <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height = "300px" class="card-img" />
+                    </div>
+
+                    <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                            </div>
+                        </div>
             </div>
-                </div>
-               </div>
+           <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height = "300px" class="card-img" />
+                    </div>
+
+                    <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                            </div>
+                        </div>
+            </div>
+               
            </div>
        </div>
    </section>
