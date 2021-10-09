@@ -39,10 +39,38 @@
               <a class="nav-link px-md-4" href="About">About</a>
             </li>
           </ul>
+          
           <div class="d-flex">
-            <a class="btn btn-login text-white" href="login">Login</a>
-            <a class="btn btn-register btn-fill text-white" href="register">Register</a>
+          @guest
+            @if (Route::has('login'))
+            <a class="btn btn-login text-white" href="{{ route('login') }}">Login</a>
+            @endif
+
+            @if (Route::has('register'))
+            <a class="btn btn-register btn-fill text-white" href="{{ route('register') }}">Register</a>
+            @endif
+
+            @else
+            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="d-flex">
+                                    <a class="btn btn-register btn-fill text-white" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+        @endguest
           </div>
+
          
         </div>
       </div>
