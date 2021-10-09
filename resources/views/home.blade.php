@@ -4,8 +4,9 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Adopt And Find Your Lost Pet | Our Pet's</title>
-      <link rel="icon" href="..\public\Images\logo.svg">
+      <link rel="icon" href="Images\foot.svg">
       <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     </head>
     <body>
@@ -13,7 +14,7 @@
        <section class="h-100 w-100" style="box-sizing: border-box; background-color: #004AAD">
     <nav class="navbar-1-3 navbar navbar-expand-lg navbar-dark p-4 px-md-4">
       <div class="container">
-        <a class="navbar-brand" href="home">
+        <a class="navbar-brand" href="/">
           <img src="Images/logo putih.png" width="91.84" height="50" alt="LOGO">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -83,47 +84,86 @@
                </div>
            </div>
            <div class="row">
-               <div class="col-3">
-               <div class="card bg-dark text-white">
-                <img src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=420&q=80" height="350" class="card-img" alt="...">
-            <div class="card-img-overlay">
-             <h5 class="card-title">Greyi</h5>
-             <p class="card-category-age">Cat | Adult</p>
-             <p class="card-distance">500 m</p>
-            </div>
+           <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height = "300px" class="card-img" />
+                    </div>
+
+                    <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                    </div>
                 </div>
-               </div>
-               <div class="col-3">
-               <div class="card bg-dark text-white">
-                <img src="https://media.istockphoto.com/photos/cute-kitten-licking-glass-table-with-copy-space-picture-id1293763250?b=1&k=20&m=1293763250&s=170667a&w=0&h=zcK63xxkMVX-ca0d5laTsDxauVUMH62F71MKcbqaGnI=" height="350" class="card-img" alt="...">
-            <div class="card-img-overlay">
-             <h5 class="card-title">Greyi</h5>
-             <p class="card-category-age">Cat | Adult</p>
-             <p class="card-distance">500 m</p>
             </div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                            src="https://media.istockphoto.com/photos/cute-kitten-licking-glass-table-with-copy-space-picture-id1293763250?b=1&k=20&m=1293763250&s=170667a&w=0&h=zcK63xxkMVX-ca0d5laTsDxauVUMH62F71MKcbqaGnI=" height = "300px" class="card-img" />
+                    </div>
+
+                    <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                    </div>
                 </div>
-               </div>
-               <div class="col-3">
-               <div class="card bg-dark text-white">
-                <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="350" class="card-img" alt="...">
-            <div class="card-img-overlay">
-             <h5 class="card-title">Greyi</h5>
-             <p class="card-category-age">Cat | Adult</p>
-             <p class="card-distance">500 m</p>
             </div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80" height = "300px" class="card-img" />
+                    </div>
+
+                    <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                    </div>
                 </div>
-               </div>
-               <div class="col-3">
-               <div class="card bg-dark text-white">
-                <img src="Images/Foot.svg" height="350">
-            <div class="card-img-overlay">
-             <h5 class="card-title">Greyi</h5>
-             <p class="card-category-age">Cat | Adult</p>
-             <p class="card-distance">500 m</p>
             </div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                            src="Images/Foot.svg" height = "300px" class="card-img" />
+                    </div>
+
+                    <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
+                    <div class="card-heading text-center">
+                        <!-- Briya -->
+                    </div>
+                    <div class="card-text text-center">
+                        <!-- Cat | Kitten -->
+                    </div>
+                    <div class="card-text text-center">
+                        <!-- 0.6 Km -->
+                    </div>
                 </div>
-               </div>
-           </div>
+            </div>
+        </div>
+            
+        
+               
        </div>
    </section>
    <!-- Akhir Card Lost Pet -->
@@ -139,10 +179,10 @@
            </div>
            <div class="row text-center">
                <div class="col">
-                   <h4 class="title-adopt text-white">
+                   <h4 class="title-adopt">
                        Checklist for New Adopters
                    </h4>
-                   <p class="caption text-white">
+                   <p class="caption">
                    Help make the transition, as smooth as possible.
                    </p>
                    <button class="btn-learn-more">
@@ -150,10 +190,10 @@
                    </button>
                </div>
                <div class="col">
-                   <h4 class="title-adopt text-white">
+                   <h4 class="title-adopt">
                    COVID-19 Resources
                    </h4>
-                   <p class="caption text-white">
+                   <p class="caption">
                    Get the latest on adoption processes, learn how local shelters
 and rescue groups are adapting and
 find out what you can do to help dogs and cats in need right now.
@@ -163,10 +203,10 @@ find out what you can do to help dogs and cats in need right now.
                    </button>
                </div>
                <div class="col">
-                   <h4 class="title-adopt text-white">
+                   <h4 class="title-adopt">
                    Pet Adoption FAQs
                    </h4>
-                   <p class="caption text-white">
+                   <p class="caption">
                    Get answers to questions you
 haven't thought of.
                    </p>
@@ -190,16 +230,25 @@ haven't thought of.
                </div>
            </div>
            <div class="row">
-               <div class="col-3">
-               <div class="card bg-dark text-white">
-                <img src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=420&q=80" height="350" class="card-img" alt="...">
-            <div class="card-img-overlay">
-             <h5 class="card-title">Greyi</h5>
-             <p class="card-category-age">Cat | Adult</p>
-             <p class="card-distance">500 m</p>
-            </div>
+           <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height = "300px" class="card-img" />
+                    </div>
+
+                    <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                            </div>
+                        </div>
                 </div>
-               </div>
                <div class="col-3">
                <div class="card bg-dark text-white">
                 <img src="https://media.istockphoto.com/photos/cute-kitten-licking-glass-table-with-copy-space-picture-id1293763250?b=1&k=20&m=1293763250&s=170667a&w=0&h=zcK63xxkMVX-ca0d5laTsDxauVUMH62F71MKcbqaGnI=" height="350" class="card-img" alt="...">
@@ -239,7 +288,7 @@ haven't thought of.
        <div class="container">
            <div class="row text-center">
                <div class="col">
-                   <h1 class="title text-white">
+                   <h1 class="title">
                    Tips And Trick
                    </h1>
                </div>
