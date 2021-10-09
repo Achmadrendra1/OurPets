@@ -23,7 +23,11 @@ Route::get('/login', function () {
 
 Route::get('/register', function () {
     return view('register');
+<<<<<<< HEAD
 });
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+=======
+});
+>>>>>>> a3458b19331c9693453d37caf2c99c46b51a0494
