@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Adopt And Find Your Lost Pet | Our Pets</title>
-    <link rel="icon" href="Images\foot.svg">
+    <link rel="icon" href="{{ asset('Images/Foot.svg') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

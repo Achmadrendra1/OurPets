@@ -53,16 +53,15 @@
 
                         @else
                         <div class="d-flex">
+
                             <a class="btn btn-login text-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">Profile</button>
-                                <button class="dropdown-item" type="button">My Pet</button>
-                                <!-- <button class="dropdown-item" type="button">Something else here</button> -->
-
+                                <a class="dropdown-item" type="button" href="profile">Profile</a>
+                                <a class="dropdown-item" type="button" href="pet">My Pet</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
+                                document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -102,10 +101,16 @@
         <div class="img-hero">
             <img src="Images/Hero.svg" width="441.54" height="600">
         </div>
+
+
     </section>
+
     <!-- Akhir Hero -->
     <!-- Card Lost Pet -->
     <section class="lost-card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#004aad" fill-opacity="1" d="M0,128L80,133.3C160,139,320,149,480,149.3C640,149,800,139,960,160C1120,181,1280,235,1360,261.3L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+        </svg>
         <div class="container">
             <div class="row text-center">
                 <div class="col">
@@ -387,10 +392,14 @@
                 </div>
             </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#004aad" fill-opacity="1" d="M0,0L80,10.7C160,21,320,43,480,69.3C640,96,800,128,960,133.3C1120,139,1280,117,1360,106.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
     </section>
     <!-- Akhir Tips & Trick -->
     <!-- Footer -->
     <section class="footer">
+
         <div class="container">
             <div class="row">
                 <div class="col">
