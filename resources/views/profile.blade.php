@@ -1,135 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adopt And Find Your Lost Pet | Our Pet's</title>
-    <link rel="icon" href="Images\foot.svg">
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
+@section('content')
+<div class="container profile">
+    <h1 class="title-profile">
+        My Our Pet's Profile
+    </h1>
+    <br />
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#aboutme">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#adopter">Adopter Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings">Account Settings</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="aboutme" class="tab-pane fade show active">
+            <h3>About Me</h3>
+            <div class="underline-title"></div>
+            <form>
+                <label for="fname">Name</label>
+                <input type="text" id="name" name="Name" placeholder="Your Name" value="{{ Auth::User()->name }}">
 
-<body>
-    <!-- NAVBAR -->
-    <section class="h-100 w-100" style="box-sizing: border-box; background-color: #004AAD">
-        <nav class="navbar-1-3 navbar navbar-expand-lg navbar-dark p-4 px-md-4">
-            <div class="container">
-                <a class="navbar-brand" href="/">
-                    <img src="Images/logo putih.png" width="91.84" height="50" alt="LOGO">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4 active" aria-current="page" href="Lost">Lost Pet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4" href="Adopt">Adoption</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4" href="Clinic">Clinic</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4" href="Tips">Tips & Trick</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4" href="About">About</a>
-                        </li>
-                    </ul>
+                <label for="fname">Handphone</label>
+                <input type="text" id="HP" name="HP" placeholder="62 xxx xxx xxx">
 
-                    <div class="d-flex">
-                        @guest
-                        @if (Route::has('login'))
-                        <a class="btn btn-login text-white" href="{{ route('login') }}">Login</a>
-                        @endif
+            </form>
 
-                        @if (Route::has('register'))
-                        <a class="btn btn-register btn-fill text-white" href="{{ route('register') }}">Register</a>
-                        @endif
+            <h4>My Address</h4>
+            <form>
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Singapore">Singapore</option>
+                </select>
 
-                        @else
-                        <div class="d-flex">
+                <label for="fname">State</label>
+                <input type="text" id="state" name="state" placeholder="DKI Jakarta">
 
-                            <a class="btn btn-login text-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{ Auth::user()->name }}
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <a class="dropdown-item" type="button" href="profile">Profile</a>
-                                <a class="dropdown-item" type="button" href="pet">My Pet</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </div>
-                        @endguest
-                    </div>
+                <label for="fname">City</label>
+                <input type="text" id="City" name="City" placeholder="Jakarta Barat">
 
+                <label for="fname">Street</label>
+                <input type="text" id="street" name="street" placeholder="Jl. Meruya Selatan No. 19">
 
-                </div>
-            </div>
-        </nav>
-    </section>
-    <!--Akhir NAVBAR  -->
-    <div class="container profile">
-        <h1 class="title-profile">
-            My Our Pet's Profile
-        </h1>
-        <br />
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#aboutme">About Me</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#adopter">Adopter Profile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#settings">Account Settings</a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <div id="aboutme" class="tab-pane fade show active">
-                <h3>About Me</h3>
+                <label for="fname">ZIP Code</label>
+                <input type="text" id="ZipCode" name="ZipCode" placeholder="11620">
 
-            </div>
-            <div id="adopter" class="tab-pane fade">
-                <h3>Adopter Profile</h3>
-
-            </div>
-            <div id="settings" class="tab-pane fade">
-                <h3>Account Settings</h3>
-
-            </div>
+            </form>
+            <div id='map' style='width: 1070px; height: 400px;'></div>
+            <button>S</button>
         </div>
+        <div id="adopter" class="tab-pane fade">
+            <h3>Adopter Profile</h3>
 
+        </div>
+        <div id="settings" class="tab-pane fade">
+            <h3>Account Settings</h3>
+
+        </div>
     </div>
 
-    <!-- Footer -->
-    <section class="footer-profile">
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="Images/logo putih.png" width="183.67" height="100" alt="" class="footer">
-                </div>
-            </div>
-            <div class="row text-center">
-                <p class="copyright text-white">Copyright © 2021 Our Pet’s. All Rights Reserved</p>
-            </div>
-        </div>
-    </section>
-    <!-- Akhir Footer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-
-</html>
+</div>
+@endsection

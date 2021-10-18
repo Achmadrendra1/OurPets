@@ -1,421 +1,323 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adopt And Find Your Lost Pet | Our Pet's</title>
-    <link rel="icon" href="Images\foot.svg">
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
+@section('content')
+<!-- HERO -->
+<section class="hero">
+    <div class="text-hero">
+        <h1 class="heading-text">
+            Make a New
+        </h1>
+        <h1 class="accent-text">
+            Friends
+        </h1>
+        <h1 class="heading-text2">
+            With Us
+        </h1>
+        <div class="p-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <a class="btn btn-get-started text-white" href="login">
+            Get Started
+        </a>
 
-<body>
-    <!-- NAVBAR -->
-    <section class="h-100 w-100" style="box-sizing: border-box; background-color: #004AAD">
-        <nav class="navbar-1-3 navbar navbar-expand-lg navbar-dark p-4 px-md-4">
-            <div class="container">
-                <a class="navbar-brand" href="/">
-                    <img src="Images/logo putih.png" width="91.84" height="50" alt="LOGO">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    </div>
+    <div class="img-hero">
+        <img src="Images/Hero.svg" width="441.54" height="600">
+    </div>
+
+
+</section>
+
+<!-- Akhir Hero -->
+<!-- Card Lost Pet -->
+<section class="lost-card">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#004aad" fill-opacity="1" d="M0,128L80,133.3C160,139,320,149,480,149.3C640,149,800,139,960,160C1120,181,1280,235,1360,261.3L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h1 class="title">
+                    Lost Pet Nearby
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
+                    </div>
+
+                    <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img src="https://media.istockphoto.com/photos/cute-kitten-licking-glass-table-with-copy-space-picture-id1293763250?b=1&k=20&m=1293763250&s=170667a&w=0&h=zcK63xxkMVX-ca0d5laTsDxauVUMH62F71MKcbqaGnI=" height="300px" class="card-img" />
+                    </div>
+
+                    <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80" height="300px" class="card-img" />
+                    </div>
+
+                    <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img src="Images/Foot.svg" height="300px" class="card-img" />
+                    </div>
+
+                    <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
+                    <div class="card-heading text-center">
+                        <!-- Briya -->
+                    </div>
+                    <div class="card-text text-center">
+                        <!-- Cat | Kitten -->
+                    </div>
+                    <div class="card-text text-center">
+                        <!-- 0.6 Km -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+<!-- Akhir Card Lost Pet -->
+<!-- Information Adopt -->
+<section class="Information-adopt">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h1 class="title-information">
+                    Planning To Adopt a Pet?
+                </h1>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col">
+                <h4 class="title-adopt">
+                    Checklist for New Adopters
+                </h4>
+                <p class="caption">
+                    Help make the transition, as smooth as possible.
+                </p>
+                <button class="btn-learn-more">
+                    Learn More
                 </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4 active" aria-current="page" href="Lost">Lost Pet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4" href="Adopt">Adoption</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4" href="Clinic">Clinic</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4" href="Tips">Tips & Trick</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-md-4" href="About">About</a>
-                        </li>
-                    </ul>
-
-                    <div class="d-flex">
-                        @guest
-                        @if (Route::has('login'))
-                        <a class="btn btn-login text-white" href="{{ route('login') }}">Login</a>
-                        @endif
-
-                        @if (Route::has('register'))
-                        <a class="btn btn-register btn-fill text-white" href="{{ route('register') }}">Register</a>
-                        @endif
-
-                        @else
-                        <div class="d-flex">
-
-                            <a class="btn btn-login text-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{ Auth::user()->name }}
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <a class="dropdown-item" type="button" href="profile">Profile</a>
-                                <a class="dropdown-item" type="button" href="pet">My Pet</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </div>
-                        @endguest
-                    </div>
-
-
-                </div>
             </div>
-        </nav>
-    </section>
-    <!--Akhir NAVBAR  -->
-    <!-- HERO -->
-    <section class="hero">
-        <div class="text-hero">
-            <h1 class="heading-text">
-                Make a New
-            </h1>
-            <h1 class="accent-text">
-                Friends
-            </h1>
-            <h1 class="heading-text2">
-                With Us
-            </h1>
-            <div class="p-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <div class="col">
+                <h4 class="title-adopt">
+                    COVID-19 Resources
+                </h4>
+                <p class="caption">
+                    Get the latest on adoption processes, learn how local shelters
+                    and rescue groups are adapting and
+                    find out what you can do to help dogs and cats in need right now.
+                </p>
+                <button class="btn-learn-more">
+                    Learn More
+                </button>
             </div>
-            <a class="btn btn-get-started text-white" href="login">
-                Get Started
-            </a>
-
-        </div>
-        <div class="img-hero">
-            <img src="Images/Hero.svg" width="441.54" height="600">
-        </div>
-
-
-    </section>
-
-    <!-- Akhir Hero -->
-    <!-- Card Lost Pet -->
-    <section class="lost-card">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#004aad" fill-opacity="1" d="M0,128L80,133.3C160,139,320,149,480,149.3C640,149,800,139,960,160C1120,181,1280,235,1360,261.3L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-        </svg>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col">
-                    <h1 class="title">
-                        Lost Pet Nearby
-                    </h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card-sl">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
-                        </div>
-
-                        <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
-                        <div class="card-heading text-center">
-                            Briya
-                        </div>
-                        <div class="card-text text-center">
-                            Cat | Kitten
-                        </div>
-                        <div class="card-text text-center">
-                            0.6 Km
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-sl">
-                        <div class="card-image">
-                            <img src="https://media.istockphoto.com/photos/cute-kitten-licking-glass-table-with-copy-space-picture-id1293763250?b=1&k=20&m=1293763250&s=170667a&w=0&h=zcK63xxkMVX-ca0d5laTsDxauVUMH62F71MKcbqaGnI=" height="300px" class="card-img" />
-                        </div>
-
-                        <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
-                        <div class="card-heading text-center">
-                            Briya
-                        </div>
-                        <div class="card-text text-center">
-                            Cat | Kitten
-                        </div>
-                        <div class="card-text text-center">
-                            0.6 Km
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-sl">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80" height="300px" class="card-img" />
-                        </div>
-
-                        <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
-                        <div class="card-heading text-center">
-                            Briya
-                        </div>
-                        <div class="card-text text-center">
-                            Cat | Kitten
-                        </div>
-                        <div class="card-text text-center">
-                            0.6 Km
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-sl">
-                        <div class="card-image">
-                            <img src="Images/Foot.svg" height="300px" class="card-img" />
-                        </div>
-
-                        <!-- <a class="card-action" href="#"><i class="bi bi-heart"></i></a> -->
-                        <div class="card-heading text-center">
-                            <!-- Briya -->
-                        </div>
-                        <div class="card-text text-center">
-                            <!-- Cat | Kitten -->
-                        </div>
-                        <div class="card-text text-center">
-                            <!-- 0.6 Km -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </div>
-    </section>
-    <!-- Akhir Card Lost Pet -->
-    <!-- Information Adopt -->
-    <section class="Information-adopt">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col">
-                    <h1 class="title-information">
-                        Planning To Adopt a Pet?
-                    </h1>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col">
-                    <h4 class="title-adopt">
-                        Checklist for New Adopters
-                    </h4>
-                    <p class="caption">
-                        Help make the transition, as smooth as possible.
-                    </p>
-                    <button class="btn-learn-more">
-                        Learn More
-                    </button>
-                </div>
-                <div class="col">
-                    <h4 class="title-adopt">
-                        COVID-19 Resources
-                    </h4>
-                    <p class="caption">
-                        Get the latest on adoption processes, learn how local shelters
-                        and rescue groups are adapting and
-                        find out what you can do to help dogs and cats in need right now.
-                    </p>
-                    <button class="btn-learn-more">
-                        Learn More
-                    </button>
-                </div>
-                <div class="col">
-                    <h4 class="title-adopt">
-                        Pet Adoption FAQs
-                    </h4>
-                    <p class="caption">
-                        Get answers to questions you
-                        haven't thought of.
-                    </p>
-                    <button class="btn-learn-more">
-                        Learn More
-                    </button>
-                </div>
+            <div class="col">
+                <h4 class="title-adopt">
+                    Pet Adoption FAQs
+                </h4>
+                <p class="caption">
+                    Get answers to questions you
+                    haven't thought of.
+                </p>
+                <button class="btn-learn-more">
+                    Learn More
+                </button>
             </div>
         </div>
+    </div>
 
-    </section>
-    <!-- Akhir Information Adopt -->
-    <!-- Adopsi Nearby -->
-    <section class="lost-card">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col">
-                    <h1 class="title">
-                        Pets Available for Adoption Nearby
-                    </h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card-sl">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
-                        </div>
-
-                        <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
-                        <div class="card-heading text-center">
-                            Briya
-                        </div>
-                        <div class="card-text text-center">
-                            Cat | Kitten
-                        </div>
-                        <div class="card-text text-center">
-                            0.6 Km
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-sl">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
-                        </div>
-
-                        <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
-                        <div class="card-heading text-center">
-                            Briya
-                        </div>
-                        <div class="card-text text-center">
-                            Cat | Kitten
-                        </div>
-                        <div class="card-text text-center">
-                            0.6 Km
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-sl">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
-                        </div>
-
-                        <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
-                        <div class="card-heading text-center">
-                            Briya
-                        </div>
-                        <div class="card-text text-center">
-                            Cat | Kitten
-                        </div>
-                        <div class="card-text text-center">
-                            0.6 Km
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-sl">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
-                        </div>
-
-                        <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
-                        <div class="card-heading text-center">
-                            Briya
-                        </div>
-                        <div class="card-text text-center">
-                            Cat | Kitten
-                        </div>
-                        <div class="card-text text-center">
-                            0.6 Km
-                        </div>
-                    </div>
-                </div>
-
+</section>
+<!-- Akhir Information Adopt -->
+<!-- Adopsi Nearby -->
+<section class="lost-card">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h1 class="title">
+                    Pets Available for Adoption Nearby
+                </h1>
             </div>
         </div>
-    </section>
-    <!-- Akhir Adopsi Nearby-->
-    <!-- Tips & Trick -->
-    <section class="tips-card">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col">
-                    <h1 class="title">
-                        Tips And Trick
-                    </h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
+                    </div>
+
+                    <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="card bg-dark text-white">
-                        <img src="https://media.istockphoto.com/photos/good-dog-picture-id938105034?b=1&k=20&m=938105034&s=170667a&w=0&h=T3KyQg1aSQao7W0OQ-BluAt4q4SwmjLGSLnBOiAmk5s=" height="350" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Greyi</h5>
-                            <p class="card-category-age">Cat | Adult</p>
-                            <p class="card-distance">500 m</p>
-                        </div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
+                    </div>
+
+                    <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="card bg-dark text-white">
-                        <img src="https://media.istockphoto.com/photos/cute-kitten-licking-glass-table-with-copy-space-picture-id1293763250?b=1&k=20&m=1293763250&s=170667a&w=0&h=zcK63xxkMVX-ca0d5laTsDxauVUMH62F71MKcbqaGnI=" height="350" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Greyi</h5>
-                            <p class="card-category-age">Cat | Adult</p>
-                            <p class="card-distance">500 m</p>
-                        </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
+                    </div>
+
+                    <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="card bg-dark text-white">
-                        <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="350" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Greyi</h5>
-                            <p class="card-category-age">Cat | Adult</p>
-                            <p class="card-distance">500 m</p>
-                        </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="300px" class="card-img" />
+                    </div>
+
+                    <a class="card-action" href="#"><i class="bi bi-heart"></i></a>
+                    <div class="card-heading text-center">
+                        Briya
+                    </div>
+                    <div class="card-text text-center">
+                        Cat | Kitten
+                    </div>
+                    <div class="card-text text-center">
+                        0.6 Km
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="card bg-dark text-white">
-                        <img src="Images/Foot.svg" height="350">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Greyi</h5>
-                            <p class="card-category-age">Cat | Adult</p>
-                            <p class="card-distance">500 m</p>
-                        </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Akhir Adopsi Nearby-->
+<!-- Tips & Trick -->
+<section class="tips-card">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h1 class="title">
+                    Tips And Trick
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="card bg-dark text-white">
+                    <img src="https://media.istockphoto.com/photos/good-dog-picture-id938105034?b=1&k=20&m=938105034&s=170667a&w=0&h=T3KyQg1aSQao7W0OQ-BluAt4q4SwmjLGSLnBOiAmk5s=" height="350" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Greyi</h5>
+                        <p class="card-category-age">Cat | Adult</p>
+                        <p class="card-distance">500 m</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card bg-dark text-white">
+                    <img src="https://media.istockphoto.com/photos/cute-kitten-licking-glass-table-with-copy-space-picture-id1293763250?b=1&k=20&m=1293763250&s=170667a&w=0&h=zcK63xxkMVX-ca0d5laTsDxauVUMH62F71MKcbqaGnI=" height="350" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Greyi</h5>
+                        <p class="card-category-age">Cat | Adult</p>
+                        <p class="card-distance">500 m</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card bg-dark text-white">
+                    <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="350" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Greyi</h5>
+                        <p class="card-category-age">Cat | Adult</p>
+                        <p class="card-distance">500 m</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card bg-dark text-white">
+                    <img src="Images/Foot.svg" height="350">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Greyi</h5>
+                        <p class="card-category-age">Cat | Adult</p>
+                        <p class="card-distance">500 m</p>
                     </div>
                 </div>
             </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#004aad" fill-opacity="1" d="M0,0L80,10.7C160,21,320,43,480,69.3C640,96,800,128,960,133.3C1120,139,1280,117,1360,106.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-        </svg>
-    </section>
-    <!-- Akhir Tips & Trick -->
-    <!-- Footer -->
-    <section class="footer">
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="Images/logo putih.png" width="183.67" height="100" alt="" class="footer">
-                </div>
-            </div>
-            <div class="row text-center">
-                <p class="copyright text-white">Copyright © 2021 Our Pet’s. All Rights Reserved</p>
-            </div>
-        </div>
-    </section>
-    <!-- Akhir Footer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-
-</html>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#004aad" fill-opacity="1" d="M0,0L80,10.7C160,21,320,43,480,69.3C640,96,800,128,960,133.3C1120,139,1280,117,1360,106.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+    </svg>
+</section>
+<!-- Akhir Tips & Trick -->
+@endsection

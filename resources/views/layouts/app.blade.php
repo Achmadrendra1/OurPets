@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Adopt And Find Your Lost Pet | Our Pets</title>
+    <title>Our Pets</title>
     <link rel="icon" href="{{ asset('Images/Foot.svg') }}">
 
     <!-- Scripts -->

@@ -110,6 +110,17 @@ section.hero {
     padding-top: 5rem;
 }
 
+.underline-title {
+    background: -webkit-linear-gradient(right, #5ECED1, #2B92BF);
+    height: 2px;
+    margin: 1rem 0 1rem 1rem;
+    width: 89px;
+}
+
+.label-profile {
+    margin-bottom: 1rem;
+}
+
 h1.heading-text {
     font-size: 64px;
     font-weight: 900;
@@ -263,48 +274,39 @@ section.footer-profile {
     padding: 50px;
 }
 
-/* Login Page */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-body.login {
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: #f5f5f5;
-}
-
-.form-signin {
+input[type=text],
+select {
     width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.card-header .login {
-    color: #004aad;
-    font-size: 32pt;
-    font-weight: 900;
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.form-signin .checkbox {
-    font-weight: 400;
+label {
+    margin: 8px 0;
 }
 
-.form-signin .form-floating:focus-within {
-    z-index: 2;
+input[type=submit]:hover {
+    background-color: #45a049;
 }
 
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
-/* Akhir Login */
+/* div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+} */
