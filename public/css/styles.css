@@ -68,7 +68,7 @@
 }
 
 .nav-tabs .nav-link:hover {
-    border: 3px solid #2b92bf;
+    /* border: 3px solid #2b92bf; */
 }
 
 .nav-tabs {
@@ -80,7 +80,7 @@
     padding: 20px;
 }
 
-.container .profile {
+.container.profile {
     padding-bottom: 2rem;
 }
 
@@ -155,7 +155,7 @@ section.lost-card {
 }
 
 .card-title {
-    padding-top: 220px;
+    /* padding-top: 220px; */
     color: #004aad;
     font-size: 24px;
     font-weight: 900;
@@ -275,6 +275,8 @@ section.footer-profile {
 }
 
 input[type=text],
+[type=password],
+
 select {
     width: 100%;
     padding: 12px 20px;
@@ -305,8 +307,40 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
+.btn .btn-primary {
+    background-color: #004aad;
+    color: #fff;
+    margin: 2rem;
+}
+
+#map {
+    margin: 1rem 0;
+    position: center;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.coordinates {
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(226, 12, 12);
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    border-radius: 3px;
+    display: none;
+}
+
 /* div {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
 } */
+#loc {
+    height: 50px;
+    padding: 8px;
+}

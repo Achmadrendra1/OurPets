@@ -13,9 +13,10 @@
         <h1 class="heading-text2">
             With Us
         </h1>
-        <div class="p-text">
+        </br>
+        <!-- <div class="p-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </div>
+        </div> -->
         <a class="btn btn-get-started text-white" href="login">
             Get Started
         </a>

@@ -27,6 +27,16 @@ Route::get('/profile', function () {
         'title' => "Profile"
     ]);
 });
+Route::get('/pet', function () {
+    return view('pet', [
+        'title' => "My Pet"
+    ]);
+});
+Route::get('/Lost', function () {
+    return view('lost_pet', [
+        'title' => "Lost Pet"
+    ]);
+});
 
 
 
