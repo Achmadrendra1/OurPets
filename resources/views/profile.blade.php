@@ -35,7 +35,6 @@
                 </button>
             </div>
             <h4>My Address</h4>
-<<<<<<< HEAD
             <!-- Disini pakein if ya, kalo gaada address dibikin kosong, kalo ada ditampilin -->
             <div class="card card-address" style="width: 100%;">
                 <div class="card-body">
@@ -48,25 +47,11 @@
                     <a href="#" class="card-link">Delete</a>
                 </div>
             </div>
-            <div class="text-center">
+            <div class="text-center m-4">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                     Add Address
                 </button>
             </div>
-=======
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                Launch demo modal
-            </button>
->>>>>>> 0ae03048455a3041f7b2cc07d773a00e183a6b47
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -79,7 +64,6 @@
                         </div>
                         <div class="modal-body">
                             <form>
-<<<<<<< HEAD
                                 <label for="fname">Label Address</label>
                                 <input type="text" id="state" name="state" placeholder="Ex: Home, Office">
 
@@ -126,39 +110,6 @@
                     </div>
                 </div>
             </div>
-=======
-                                <label for="country">Country</label>
-                                <select id="country" name="country">
-                                    <option value="Indonesia">Indonesia</option>
-                                    <option value="Malaysia">Malaysia</option>
-                                    <option value="Singapore">Singapore</option>
-                                </select>
-
-                                <label for="fname">State</label>
-                                <input type="text" id="state" name="state" placeholder="DKI Jakarta">
-
-                                <label for="fname">City</label>
-                                <input type="text" id="City" name="City" placeholder="Jakarta Barat">
-
-                                <label for="fname">Street</label>
-                                <input type="text" id="street" name="street" placeholder="Jl. Meruya Selatan No. 19">
-
-                                <label for="fname">ZIP Code</label>
-                                <input type="text" id="ZipCode" name="ZipCode" placeholder="11620">
-
-                            </form>
-                            <div id='map' style='width: 1070px; height: 400px;'></div>
-                            <button>S</button>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
->>>>>>> 0ae03048455a3041f7b2cc07d773a00e183a6b47
         </div>
 
 

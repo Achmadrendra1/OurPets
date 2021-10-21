@@ -32,12 +32,12 @@ Route::get('/pet', function () {
         'title' => "My Pet"
     ]);
 });
-Route::get('/Lost', function () {
-    return view('lost_pet', [
-        'title' => "Lost Pet"
+
+Route::get('/Adopt', function () {
+    return view('Adoption', [
+        'title' => "Adoption"
     ]);
 });
-
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
