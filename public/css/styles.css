@@ -276,7 +276,7 @@ section.footer-profile {
 
 input[type=text],
 [type=password],
-
+textarea,
 select {
     width: 100%;
     padding: 12px 20px;
