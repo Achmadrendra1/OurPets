@@ -8,13 +8,13 @@
     <br />
     <ul class="nav nav-pills" id="tab" role="tablist">
         <li class=" nav-item">
-            <a class="nav-link active m-2" data-toggle="pills" href="#aboutme">About Me</a>
+            <a class="nav-link active m-2" data-toggle="pill" href="#aboutme">About Me</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link m-2" data-toggle="pills" href="#MyAddress">MyAddress</a>
+            <a class="nav-link m-2" data-toggle="pill" href="#MyAddress">MyAddress</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link m-2" data-toggle="pills" href="#settings">Account Settings</a>
+            <a class="nav-link m-2" data-toggle="pill" href="#settings">Account Settings</a>
         </li>
     </ul>
 
@@ -37,19 +37,7 @@
         </div>
     </div>
 
-    <script>
-    $(function(){
-    var hash = window.location.hash;
-    hash && $('ul.nav a[href="' + hash + '"]').tab('show');
-
-        $('.nav-pills a').click(function (e) {
-            $(this).tab('show');
-            var scrollmem = $('body').scrollTop() || $('html').scrollTop();
-            window.location.hash = this.hash;
-            $('html,body').scrollTop(scrollmem);
-        });
-    });
-    </script>
+    
 
     <div id="MyAddress" class="tab-pane fade">
         <form method="POST" action="">

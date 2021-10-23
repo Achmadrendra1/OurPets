@@ -99,6 +99,21 @@
         </div>
     </section>
     <!-- Akhir Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function() {
+            var url = document.location.toString();
+            if (url.match('#')) {
+                console.log(url.split('#')[1]);
+                $('a[href="#' + url.split('#')[1] + '"]').parent().addClass('active');
+                $('#' + url.split('#')[1]).addClass('active in')
+            }
+            $('a[data-toggle="pill"]').on('shown.bs.tab', function(e) {
+                window.location.hash = e.target.hash;
+            });
+        });
+    </script>
     <!-- Maps center: '-6.209391837461502, 106.73858120477016'-->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
