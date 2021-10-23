@@ -3,7 +3,7 @@
 @section('content')
 <div class="container profile">
     <h1 class="title-profile">
-        My Our Pet's Profile
+        {{ Auth::user()->name }}'s Profile
     </h1>
     <br />
     <ul class="nav nav-pills" id="tab" role="tablist">
@@ -11,7 +11,7 @@
             <a class="nav-link active m-2" data-toggle="pill" href="#aboutme">About Me</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link m-2" data-toggle="pill" href="#MyAddress">MyAddress</a>
+            <a class="nav-link m-2" data-toggle="pill" href="#address">MyAddress</a>
         </li>
         <li class="nav-item">
             <a class="nav-link m-2" data-toggle="pill" href="#settings">Account Settings</a>
@@ -53,9 +53,7 @@
             </div>
         </div>
 
-
-
-        <div id="MyAddress" class="tab-pane fade">
+        <div id="address" class="tab-pane fade">
             <form method="POST" action="">
                 <h3>My Address</h3>
                 <div class="underline-title"></div>
@@ -64,6 +62,22 @@
                         + Add New Address
                     </button>
                 </div>
+                @foreach($user_location as $loc)
+                @if($loc->userid == Auth::user()->name)
+                <div class="card card-address" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $loc->loc_name}}</h5>
+                        <p class="card-text">
+                        {{ $loc->states}} ,{{ $loc->city}}, {{ $loc->district}} , {{ $loc->zipcode}}<br />
+                        {{ $loc->latitude}} + {{ $loc->longitude}}<br />
+                        </p>
+                        <a href="{{ Request::url() && $loc->id }}" class="card-link">Edit</a>
+                        <a href="{{ Request::url() && $loc->id }}" class="card-link">Delete</a>
+                    </div>
+                </div>
+                </br>
+                @endif
+                @endforeach
                 <!-- Disini pakein if ya, kalo gaada address dibikin kosong, kalo ada ditampilin -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">

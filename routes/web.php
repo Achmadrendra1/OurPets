@@ -17,20 +17,16 @@ use App\Http\Controllers\ProfileController;
 
 Auth::routes();
 
-Route::get('/', [ProfileController::class, 'index']);
-Route::get('/profile', [ProfileController::class, 'profile']);
-
 Route::get('/', function () {
     return view('home', [
         'title' => "Home"
     ]);
 });
 
-// Route::get('/profile', function () { 
-//     return view('profile', ['title' => "Profile"]);
-// });
-
-Route::resource('/profile/MyAddress',AddingAddressController::class);
+Route::group(['middleware' => 'auth'],function(){
+    Route::get('/', [ProfileController::class, 'index']);
+    Route::get('/profile', [ProfileController::class, 'profile']);
+});
 
 Route::get('/pet', function () {
     return view('pet', [
