@@ -8,13 +8,13 @@
     <br />
     <ul class="nav nav-pills" id="pills-tab" role="tablist">
         <li class=" nav-item">
-            <a class="nav-link active" data-toggle="pill" href="#aboutme">About Me</a>
+            <a class="nav-link active m-2" data-toggle="pill" href="#aboutme">About Me</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#adopter">Adopter Profile</a>
+            <a class="nav-link m-2" data-toggle="pill" href="#MyAddress">MyAddress</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#settings">Account Settings</a>
+            <a class="nav-link m-2" data-toggle="pill" href="#settings">Account Settings</a>
         </li>
     </ul>
     <div class="tab-content">
@@ -32,91 +32,81 @@
             <div class="text-center">
                 <button type="button" class="btn btn-primary" href="#">
                     UPDATE
-                </button>
-            </div>
-            <h4>My Address</h4>
-            <!-- Disini pakein if ya, kalo gaada address dibikin kosong, kalo ada ditampilin -->
-            <div class="card card-address" style="width: 100%;">
-                <div class="card-body">
-                    <h5 class="card-title">Label Address</h5>
-                    <p class="card-text">
-                        Street, City, State, Country, ZIP Code<br />
-                        Icon + Coordinat<br />
-                    </p>
-                    <a href="#" class="card-link">Edit</a>
-                    <a href="#" class="card-link">Delete</a>
-                </div>
-            </div>
-            <div class="text-center m-4">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                    Add Address
-                </button>
-            </div>
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Add Address</h5>
+            </button>
+        </div>
+    </div>
 
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <label for="fname">Label Address</label>
-                                <input type="text" id="state" name="state" placeholder="Ex: Home, Office">
 
-                                <label for="fname">Street</label>
-                                <input type="text" id="street" name="street" placeholder="Ex: Jl. Meruya Selatan No. 19">
+    <div id="MyAddress" class="tab-pane fade">
+        <form method="POST" action="">
+        <h3>My Address</h3> 
+        <div class="underline-title"></div>
+        <div class="text-center m-3">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                + Add New Address 
+            </button>
+        </div>
+        <!-- Disini pakein if ya, kalo gaada address dibikin kosong, kalo ada ditampilin -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add Address</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label for="fname">Label Address</label>
+                            <input type="text" id="state" name="locname" placeholder="Ex: Home, Office">
 
-                                <label for="fname">City</label>
-                                <input type="text" id="City" name="City" placeholder="Ex: Jakarta Barat">
+                            <label for="fname">Street</label>
+                            <input type="text" id="street" name="street" placeholder="Ex: Jl. Meruya Selatan No. 19">
 
-                                <label for="fname">State</label>
-                                <input type="text" id="state" name="state" placeholder="Ex: DKI Jakarta">
+                            <label for="fname">City</label>
+                            <input type="text" id="City" name="City" placeholder="Ex: Jakarta Barat">
 
-                                <label for="country">Country</label>
-                                <select id="country" name="country">
-                                    <option value="Indonesia">Indonesia</option>
-                                    <option value="Malaysia">Malaysia</option>
-                                    <option value="Singapore">Singapore</option>
-                                </select>
+                            <label for="fname">State</label>
+                            <input type="text" id="state" name="state" placeholder="Ex: DKI Jakarta">
 
-                                <label for="fname">ZIP Code</label>
-                                <input type="text" id="ZipCode" name="ZipCode" placeholder="Ex: 11620">
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Singapore">Singapore</option>
+                            </select>
 
-                                <div class="row">
-                                    <div class="col">
-                                        <!-- <label>Longitude</label> -->
-                                        <input type="hidden" id="long">
-                                    </div>
-                                    <div class="col">
-                                        <!-- <label>Latitude</label> -->
-                                        <input type="hidden" id="lat">
-                                    </div>
+                            <label for="fname">ZIP Code</label>
+                            <input type="text" id="ZipCode" name="ZipCode" placeholder="Ex: 11620">
 
+                            <div class="row">
+                                <div class="col">
+                                    <!-- <label>Longitude</label> -->
+                                    <input type="hidden" id="long">
+                                </div>
+                                <div class="col">
+                                    <!-- <label>Latitude</label> -->
+                                    <input type="hidden" id="lat">
                                 </div>
 
-                            </form>
-                            <label for="map">Pin Your Location</label>
-                            <div id='map' style='width: 420px; height: 300px;'></div>
+                            </div>
 
-                        </div>
-                        <div class="text-center mb-4">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        </form>
+                        <label for="map">Pin Your Location</label>
+                        <div id='map' style='width: 420px; height: 300px;'></div>
+
+                    </div>
+                    <div class="text-center mb-4">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
+        </form>
+    </div>
 
-
-        <div id="adopter" class="tab-pane fade">
-            <h3>Adopter Profile</h3>
-
-        </div>
         <div id="settings" class="tab-pane fade">
             <form>
                 <label for="fname">Email</label>

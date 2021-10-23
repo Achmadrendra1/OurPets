@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AddingAddressController;
 // use App\Http\Controllers\Auth;
 
 /*
@@ -22,11 +23,12 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/profile', function () {
-    return view('profile', [
-        'title' => "Profile"
-    ]);
+Route::get('/profile', function () { 
+    return view('profile', ['title' => "Profile"]);
 });
+
+Route::resource('/profile/MyAddress',AddingAddressController::class);
+
 Route::get('/pet', function () {
     return view('pet', [
         'title' => "My Pet"
@@ -36,8 +38,7 @@ Route::get('/pet', function () {
 Route::get('/Adopt', function () {
     return view('Adoption', [
         'title' => "Adoption"
-    ]);
+    ]); 
 });
-
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
