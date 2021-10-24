@@ -46,7 +46,7 @@
 
 
             </form>
-            <div class="text-center">
+            <div class="text-center m-4">
                 <button type="button" class="btn btn-primary" href="#">
                     UPDATE
                 </button>
