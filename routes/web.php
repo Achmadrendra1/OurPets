@@ -18,11 +18,9 @@ use App\Http\Controllers\ProfileController;
 
 Auth::routes();
 
+Route::get('/', [HomeController::class, 'index']);
 
-Route::group(['middleware' => 'auth'],function(){
-    Route::get('/', [HomeController::class, 'index']);
-    Route::get('/profile', [ProfileController::class, 'profile']);
-});
+Route::resource('/profile',ProfileController::class);
 
 Route::get('/pet', function () {
     return view('pet', [

@@ -54,7 +54,6 @@
         </div>
 
         <div id="address" class="tab-pane fade">
-            <form method="POST" action="">
                 <h3>My Address</h3>
                 <div class="underline-title"></div>
                 <div class="text-center m-3">
@@ -88,8 +87,9 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form method="POST" action="{{ route('profile.store') }}">
+                            @csrf
                             <div class="modal-body">
-                                <form>
                                     <label for="fname">Label Address</label>
                                     <input type="text" id="state" name="locname" placeholder="Ex: Home, Office">
 
@@ -123,20 +123,18 @@
                                         </div>
 
                                     </div>
-
-                                </form>
                                 <label for="map">Pin Your Location</label>
                                 <div id='map' style='width: 420px; height: 300px;'></div>
 
                             </div>
                             <div class="text-center mb-4">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
-            </form>
         </div>
 
         <div id="settings" class="tab-pane fade">
