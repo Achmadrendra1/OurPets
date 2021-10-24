@@ -14,6 +14,7 @@ class CreateUserLocation extends Migration
     public function up()
     {
         Schema::create('user_location', function (Blueprint $table) {
+            $table->id();
             $table->string('userid');
             $table->string('loc_name');
             $table->decimal('latitude');

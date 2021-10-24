@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddingAddressController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -17,18 +18,11 @@ use App\Http\Controllers\ProfileController;
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 
-
-
-Route::get('/', function () {
-    return view('home', [
-        'title' => "Home"
-    ]);
+Route::group(['middleware' => 'auth'],function(){
+    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/profile', [ProfileController::class, 'profile']);
 });
-
-Route::resource('/profile/MyAddress',AddingAddressController::class);
 
 Route::get('/pet', function () {
     return view('pet', [
