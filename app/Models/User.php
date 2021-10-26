@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function PetModel()
+    {
+        // Setiap user akan memiliki banyak data
+        return $this->hasMany(PetModel::class, 'user_id');
+    } 
 }

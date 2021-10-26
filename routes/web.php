@@ -25,11 +25,6 @@ Route::get('/', [HomeController::class, 'index']);
 Route::resource('/profile',ProfileController::class);
 Route::resource('/pet',PetController::class);
 
-// Route::get('/pet', function () {
-//     return view('pet', [
-//         'title' => "My Pet"
-//     ]);
-// });
 
 Route::get('/Adopt', function () {
     return view('Adoption', [
@@ -42,5 +37,4 @@ Route::get('/Lost', function () {
         'title' => "Lost Pet"
     ]);
 });
-
 

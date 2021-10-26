@@ -10,4 +10,9 @@ class PetModel extends Model
     use HasFactory;
     protected $table = 'pet';
     protected $primaryKey = 'petid';
+
+    public function User()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

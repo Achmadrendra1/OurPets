@@ -3,6 +3,7 @@
 @section('content')
 <h2 class="text-center m-4">My Pet</h2>
 <?php foreach ($all_pet as $pet) : ?>
+     @if ($pet->user->id == Auth::user()->id)
 <div class="card card-mypet m-4" style="width: 95%;">
     <div class="card-body">
         <div class="row ">
@@ -26,6 +27,7 @@
         <a href="detail" class="stretched-link"></a>
     </div>
 </div>
+@endif
 @endforeach
 
 <div class="text-center m-4">
