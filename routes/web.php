@@ -18,8 +18,6 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Auth::routes();
-
 Route::get('/', [HomeController::class, 'index']);
 
 Route::resource('/profile',ProfileController::class);
@@ -38,3 +36,5 @@ Route::get('/Lost', function () {
     ]);
 });
 
+
+Auth::routes();

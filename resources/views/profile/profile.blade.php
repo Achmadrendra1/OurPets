@@ -59,7 +59,7 @@
         <div id="address" class="tab-pane fade">
             <h3>My Address</h3>
             <div class="underline-title"></div>
-            <?php foreach ($user_loc as $loc) : ?>
+            @foreach ($user_loc as $loc)
             <div class="card card-address" style="width: 100%;">
                 <div class="card-body">
                     <h5 class="card-title">{{ $loc->loc_name}}</h5>
