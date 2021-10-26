@@ -10,17 +10,17 @@ class UserLocation extends Model
     use HasFactory;
 
     protected $table = "user_location";
-    protected $primaryKey = "id";
+    // protected $primaryKey = "id";
 
-//     protected $fillable = [
-//         'userid',
-//         'loc_name',
-//         'latitude',
-//         'longitude',
-//         'states',
-//         'city',
-//         'zipcode',
-//         'input_date',
-//         'status'  
-//     ];
+    protected $fillable = [
+        'userid',
+        'loc_name',
+        'latitude',
+        'longitude',
+        'states',
+        'city',
+        'zipcode',
+        'input_date',
+        'status'  
+    ];
 }

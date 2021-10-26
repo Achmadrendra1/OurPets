@@ -3,25 +3,27 @@
 
 @section('content')
 
+
 <div class="container profile">
-    <h1 class="title-profile">
-        
-    {{ Auth::user()->name }}'s Profile
-    </h1>
-    <br />
-        <ul class="nav nav-pills" id="tab" role="tablist">
-            <li class=" nav-item">
-                <a class="nav-link m-2 active" href="#aboutme" data-toggle="pill">About Me</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link m-2" href="#address" data-toggle="pill">MyAddress</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link m-2 " href="#settings" data-toggle="pill">Account Settings</a>
-            </li>
+    <div class="card text-center" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{ Auth::user()->name }}</h5>
+        <ul class="list-group">
+            <li class="list-group-item">About Me</li>
+            <li class="list-group-item">Address</li>
+            <li class="list-group-item">Settings</li>
         </ul>
     </div>
-
+    
+    </div>
+    <div class="card text-center" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Example Grati</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis maxime harum unde repellat, illo consequatur officiis veritatis totam id! Optio fugit porro mollitia aut id! Nobis tenetur architecto quod.</p>
+        <a href="#" class="btn btn-primary">Example Grati</a>
+    </div>
+    </div>
 </div>
+@yield('profile')
 
 @endsection

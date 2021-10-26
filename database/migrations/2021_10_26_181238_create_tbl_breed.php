@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserLocsTable extends Migration
+class CreateTblBreed extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateUserLocsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user__locs', function (Blueprint $table) {
+        Schema::create('tbl_breed', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('id_animal');
+            $table->time_stamp();
+            $table->string('status');
         });
     }
 
@@ -26,6 +28,6 @@ class CreateUserLocsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user__locs');
+        Schema::dropIfExists('tbl_breed');
     }
 }

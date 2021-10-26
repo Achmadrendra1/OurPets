@@ -19,7 +19,7 @@ class ProfileController extends Controller
     {
         //
         $user_location = UserLocation::all();
-        return view('profile', ['title' => "Profile",'user_loc' => $user_location]);
+        return view('profile.index', ['title' => "Profile",'user_loc' => $user_location]);
         
     }
 
@@ -57,7 +57,7 @@ class ProfileController extends Controller
         $user_location->zipcode = $request->ZipCode;
         $user_location->status = "Active";
         $user_location->save();
-        return redirect('/profile#address');
+        return redirect('/profile');
     }
 
     /**

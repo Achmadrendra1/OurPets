@@ -1,4 +1,4 @@
-@section('content')
+@section('profile')
 <div id="address" class="tab-pane fade">
             <h3>My Address</h3>
             <div class="underline-title"></div>

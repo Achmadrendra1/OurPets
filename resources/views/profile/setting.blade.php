@@ -1,4 +1,4 @@
-@section('content')
+@section('profile')
 <div id="settings" class="tab-pane fade">
             <form>
                 <label for="fname">Email</label>

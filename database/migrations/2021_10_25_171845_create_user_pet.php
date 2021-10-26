@@ -13,19 +13,20 @@ class CreatePet extends Migration
      */
     public function up()
     {
-        Schema::create('pet', function (Blueprint $table) {
+        Schema::create('user_pet', function (Blueprint $table) {
             $table->bigIncrements('petid');
             $table->string('user_id');
             $table->string('petname');
             $table->string('animal');
             $table->string('breed');
-            $table->string('birth_month');
-            $table->string('birth_year');
-            $table->string('gender');
+            $table->integer('weight');
+            $table->integer('height');
             $table->string('color');
+            $table->date('date_birth');
+            $table->string('gender');
             $table->string('photo');
+            $table->time_stamp();
             $table->string('status');
-            $table->timestamps();
         });
     }
 

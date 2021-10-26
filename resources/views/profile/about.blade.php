@@ -1,4 +1,5 @@
-@section('content')
+@extends('index.profile')
+@section('profile')
 <div id="aboutme" class="tab-pane fade show active">
             <h3>About Me</h3>
             <div class="underline-title"></div>
