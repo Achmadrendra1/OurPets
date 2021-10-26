@@ -1,62 +1,5 @@
-
-@extends('layouts.main')
-
 @section('content')
-
-<div class="container profile">
-    <h1 class="title-profile">
-        
-    {{ Auth::user()->name }}'s Profile
-    </h1>
-    <br />
-    <ul class="nav nav-pills" id="tab" role="tablist">
-        <li class=" nav-item">
-            <a class="nav-link m-2 active" href="#aboutme" data-toggle="pill">About Me</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link m-2" href="#address" data-toggle="pill">MyAddress</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link m-2 " href="#settings" data-toggle="pill">Account Settings</a>
-        </li>
-    </ul>
-
-    <div class="tab-content">
-        <div id="aboutme" class="tab-pane fade show active">
-            <h3>About Me</h3>
-            <div class="underline-title"></div>
-            <form>
-                <label for="Name">Name</label>
-                <input type="text" id="name" name="Name" placeholder="Your Name" value="{{ Auth::User()->name }}">
-
-                <label for="Email">Email</label>
-                <input type="text" id="Email" name="Email" placeholder="Ex : a@ourpets.id" value="{{ Auth::User()->email }}">
-
-                <label for="Handphone">Handphone</label>
-                <input type="text" id="HP" name="HP" placeholder="62 xxx xxx xxx">
-
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-
-                <label for="birthday">Birthday</label>
-                <input type="text" id="birthday" name="birthday" placeholder="YYYY - MM - DD">
-
-                <label for="bio">BIO</label>
-                <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
-
-
-            </form>
-            <div class="text-center m-4">
-                <button type="button" class="btn btn-primary" href="#">
-                    UPDATE
-                </button>
-            </div>
-        </div>
-
-        <div id="address" class="tab-pane fade">
+<div id="address" class="tab-pane fade">
             <h3>My Address</h3>
             <div class="underline-title"></div>
             @foreach ($user_loc as $loc)
@@ -137,25 +80,4 @@
                 </div>
             </div>
         </div>
-
-        <div id="settings" class="tab-pane fade">
-            <form>
-                <label for="fname">Email</label>
-                <input type="text" id="Email" name="Email" value="{{ Auth::User()->email }}">
-
-                <label for="fname">Change Password</label>
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-
-            </form>
-            <div class="text-center">
-                <button type="button" class="btn btn-primary">UPDATE</button>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
 @endsection
