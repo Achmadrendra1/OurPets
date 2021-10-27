@@ -22,9 +22,10 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::resource('/pet',PetController::class);
 
-Route::resource('/profile', ProfileController::class);
+Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('profile/about', [ProfileController::class, 'about']);
 Route::get('profile/address', [ProfileController::class, 'address']);
+Route::get('profile/settings', [ProfileController::class, 'settings']);
 
 
 Route::get('/Adopt', function () {

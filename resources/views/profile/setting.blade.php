@@ -1,6 +1,6 @@
 @extends('profile.index')
 @section('profile')
-<div id="settings" class="tab-pane fade">
+<div id="settings" class="tab-pane fade show active">
     <form>
         <label for="fname">Email</label>
         <input type="text" id="Email" name="Email" value="{{ Auth::User()->email }}">

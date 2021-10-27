@@ -18,10 +18,29 @@ class ProfileController extends Controller
     public function index()
     {
         //
-        $user_location = UserLocation::all();
-        return view('profile.index', ['title' => "Profile", 'user_loc' => $user_location]);
+        return view('profile.index', ['title' => "Profile"]);
         
     }
+
+    public function about()
+    {
+        return view('profile.about', ['title' => "Profile"]);
+    }
+
+    public function address()
+    {
+        $user_location = UserLocation::all();
+        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_location]);
+    }
+
+
+    public function settings()
+    {
+        $user_location = UserLocation::all();
+        return view('profile.setting', ['title' => "Profile", 'user_loc' => $user_location]);
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -69,17 +88,6 @@ class ProfileController extends Controller
     public function show()
     {
         // 
-    }
-
-    public function about()
-    {
-        return view('home', ['title' => "Profile"]);
-    }
-
-    public function address()
-    {
-        $user_location = UserLocation::all();
-        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_location]);
     }
 
     /**
