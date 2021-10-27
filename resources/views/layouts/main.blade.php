@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Pet's | {{ $title }}</title>
-    <link rel="icon" href="Images\foot.svg">
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <script src="js/scripts.js"></script>
+    <link rel="icon" href="../Images\foot.svg">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script src="../js/scripts.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
@@ -22,7 +22,7 @@
         <nav class="navbar-1-3 navbar navbar-expand-lg navbar-dark p-4 px-md-4">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="Images/logo putih.png" width="91.84" height="50" alt="LOGO">
+                    <img src="../Images/logo putih.png" width="91.84" height="50" alt="LOGO">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -88,7 +88,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="Images/logo putih.png" width="183.67" height="100" alt="" class="footer">
+                    <img src="../Images/logo putih.png" width="183.67" height="100" alt="" class="footer">
                 </div>
             </div>
             <div class="row text-center">

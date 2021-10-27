@@ -19,7 +19,7 @@ class ProfileController extends Controller
     {
         //
         $user_location = UserLocation::all();
-        return view('profile.index', ['title' => "Profile",'user_loc' => $user_location]);
+        return view('profile.index', ['title' => "Profile", 'user_loc' => $user_location]);
         
     }
 
@@ -66,9 +66,20 @@ class ProfileController extends Controller
      * @param  \App\Models\UserLocation  $userLocation
      * @return \Illuminate\Http\Response
      */
-    public function show(UserLocation $userLocation)
+    public function show()
     {
-        //
+        // 
+    }
+
+    public function about()
+    {
+        return view('home', ['title' => "Profile"]);
+    }
+
+    public function address()
+    {
+        $user_location = UserLocation::all();
+        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_location]);
     }
 
     /**
