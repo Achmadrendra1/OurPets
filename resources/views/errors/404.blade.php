@@ -58,7 +58,7 @@
     </style>
 
     <div class="empty-4-7 container mx-auto d-flex align-items-center justify-content-center flex-column" style="font-family: 'Poppins', sans-serif;">    
-        <img class="main-img img-fluid" src="Images/404.svg" alt="">
+        <img class="main-img img-fluid" src="../Images/404.svg" alt="">
         
         <div class="text-center w-100">
             <h1 class="title-text">
@@ -68,7 +68,7 @@
                 The page you’re looking for isn’t found. We<br class="d-sm-block d-none"> suggest you Back to Homepage.
             </p>
             <div class="d-flex justify-content-center">
-                <a class="btn btn-back d-inline-flex text-white border-0" href="..\index.php">
+                <a class="btn btn-back d-inline-flex text-white border-0" href="../index.php">
                     Back to Homepage
                 </a>
             </div>

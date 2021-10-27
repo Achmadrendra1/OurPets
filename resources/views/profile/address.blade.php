@@ -32,7 +32,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form method="post" action="/profile#address">
+                <form method="post" action="address/create">
                     @csrf
                     <div class="modal-body">
                         <label for="locname">Label Address</label>

@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class PetModel extends Model
 {
     use HasFactory;
-    protected $table = 'pet';
+    protected $table = 'user_pet';
     protected $primaryKey = 'petid';
 
     public function User()
     {
+        //1 Data untuk 1 User
         return $this->belongsTo(User::class);
     }
 }

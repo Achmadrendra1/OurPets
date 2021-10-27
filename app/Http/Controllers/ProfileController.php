@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\UserLocation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 
 class ProfileController extends Controller
@@ -76,7 +78,30 @@ class ProfileController extends Controller
         $user_location->zipcode = $request->ZipCode;
         $user_location->status = "Active";
         $user_location->save();
-        return redirect('/profile');
+        return redirect('profile/address');
+    }
+
+    public function changePassword(Request $request)
+    {
+        $user = Auth::user();
+
+        $userPassword = $user->password;
+
+        $request->validate([
+            'current_password' => 'required',
+            'password' => 'required|same:confirm_password|min:6',
+            'confirm_password' => 'required',
+        ]);
+
+        if (!Hash::check($request->current_password, $userPassword)) {
+            return back()->withErrors(['current_password' => 'password not match']);
+        }
+
+        $user->password = Hash::make($request->password);
+
+        $user->save();
+
+        return redirect()->back()->with('success', 'password successfully updated');
     }
 
     /**

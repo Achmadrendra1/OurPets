@@ -22,19 +22,25 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::resource('/pet',PetController::class);
 
-Route::get('/profile', [ProfileController::class, 'index']);
-Route::get('profile/about', [ProfileController::class, 'about']);
-Route::get('profile/address', [ProfileController::class, 'address']);
-Route::get('profile/settings', [ProfileController::class, 'settings']);
+Route::group(['namespace' => 'profile', 'prefix' => 'profile'], function () {
+    Route::get('/', [ProfileController::class, 'about']);
+    // Route::get('about', [ProfileController::class, 'about']);
+    Route::post('address/create', [ProfileController::class, 'store']);
+    Route::get('address', [ProfileController::class, 'address']);
+    Route::get('settings', [ProfileController::class, 'settings']);
+    Route::post('settings/save', [ProfileController::class, 'changePassword']);
+});
 
 
-Route::get('/Adopt', function () {
+
+
+Route::get('Adopt', function () {
     return view('Adoption', [
         'title' => "Adoption"
     ]); 
 });
 
-Route::get('/Lost', function () {
+Route::get('Lost', function () {
     return view('lost_pet', [
         'title' => "Lost Pet"
     ]);

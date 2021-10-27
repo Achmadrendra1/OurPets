@@ -16,7 +16,7 @@ class CreateTblBreed extends Migration
         Schema::create('tbl_breed', function (Blueprint $table) {
             $table->id();
             $table->string('id_animal');
-            $table->time_stamp();
+            $table->timestamps();
             $table->string('status');
         });
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePet extends Migration
+class CreateUserAddinfo extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,8 @@ class CreatePet extends Migration
      */
     public function up()
     {
-        Schema::create('user_pet', function (Blueprint $table) {
+        Schema::create('user_addinfo', function (Blueprint $table) {
+           
             $table->bigIncrements('petid');
             $table->string('user_id');
             $table->string('petname');
@@ -25,8 +26,8 @@ class CreatePet extends Migration
             $table->date('date_birth');
             $table->string('gender');
             $table->string('photo');
-            $table->time_stamp();
             $table->string('status');
+            $table->timestamps();
         });
     }
 
@@ -37,6 +38,6 @@ class CreatePet extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pet');
+        Schema::dropIfExists('user_addinfo');
     }
 }
