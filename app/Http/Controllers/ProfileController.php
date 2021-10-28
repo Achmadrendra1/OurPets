@@ -68,7 +68,7 @@ class ProfileController extends Controller
         // ]); 
 
         $user_location = new UserLocation();
-        $user_location->email = 11;
+        $user_location->userid = Auth::user()->email;
         $user_location->loc_name = $request->locname;
         $user_location->latitude = $request->lat;
         $user_location->longitude = $request->long;

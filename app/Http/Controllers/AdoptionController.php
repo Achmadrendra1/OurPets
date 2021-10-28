@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Models\UserLocation;
 
-class location extends Controller
+class AdoptionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,18 +15,23 @@ class location extends Controller
      */
     public function index(Request $request)
     {
-
         $long = $request->long;
         $lat = $request->lat;
-        $respone = Http::get('https://api.mapbox.com/geocoding/v5/mapbox.places/'. $long . ',' . $lat . '.json?country=id&limit=1&access_token=pk.eyJ1IjoiYWNobWFkcmVuZHJhMSIsImEiOiJja3VqdXlwZnkzMXh5MnZuemY0dXlxajd3In0.UI_gQ4TAo_CwXdZVduEIxQ');
-        $features = $respone->json('features');
-        foreach ($features as $value) {
-           $place = $value['place_name'];
+        $user_loc = UserLocation::all();
+        foreach ($user_loc as $loc) {
+            $address = $loc['loc_name'] . " : " . $loc['district'] . ", " . $loc['city'] . ", " . $loc['zipcode'];
+            $long1 = $loc['longitude'];
+            $lat1 = $loc['latitude'];
         }
 
-        return $place;
-    }
 
+        return view('adoption', [
+            'title' => 'Adoption',
+            'location' => $address,
+            'long' => $long,
+            'lat' => $lat,
+        ]);
+    }
     
 
     /**
@@ -46,7 +52,18 @@ class location extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $long = $request->long;
+        $lat = $request->lat;
+        $respone = Http::get('https://api.mapbox.com/geocoding/v5/mapbox.places/' . $long . ',' . $lat . '.json?country=id&limit=1&access_token=pk.eyJ1IjoiYWNobWFkcmVuZHJhMSIsImEiOiJja3VqdXlwZnkzMXh5MnZuemY0dXlxajd3In0.UI_gQ4TAo_CwXdZVduEIxQ');
+        $features = $respone->json('features');
+        foreach ($features as $value) {
+            $place = $value['place_name'];
+        }
+
+        return view('adoption', [
+            'title' => 'Adoption',
+            'place' => $place
+        ]);
     }
 
     /**

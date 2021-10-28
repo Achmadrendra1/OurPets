@@ -5,7 +5,8 @@
 <div class="container" id="loc">
     <div class="row">
         <div class="col-10">
-            <p>Lokasi, Ex. Meruya Ilir, Jakarta Barat</p>
+            <p>{{ Request::is('Lost/change') ? $place : $location }}</p>
+            
         </div>
         <div class="col">
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Change Location</button>
@@ -23,16 +24,16 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="lost/create">
+                <form method="post" action="{{ URL::to('Lost/change')  }}">
                     @csrf
                     <div class="row">
                         <div class="col">
                             <!-- <label>Longitude</label> -->
-                            <input type="text" id="long" name="long">
+                            <input type="hidden" id="long" name="long">
                         </div>
                         <div class="col">
                             <!-- <label>Latitude</label> -->
-                            <input type="text" id="lat" name="lat">
+                            <input type="hidden" id="lat" name="lat">
                         </div>
 
                     </div>

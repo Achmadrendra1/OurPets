@@ -1,12 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AddingAddressController;
+use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\location;
-
+use App\Http\Controllers\LostPetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +18,16 @@ use App\Http\Controllers\location;
 |
 */
 
+//Auth
+Auth::routes();
+
+//Home
 Route::get('/', [HomeController::class, 'index']);
 
-Route::resource('/pet',PetController::class);
+//MyPet
+Route::resource('pet',PetController::class);
 
+//Profile
 Route::prefix('profile')->group(function () {
     Route::get('/', [ProfileController::class, 'about']);
     Route::post('address/create', [ProfileController::class, 'store']);
@@ -32,18 +37,19 @@ Route::prefix('profile')->group(function () {
     Route::post('settings/save', [ProfileController::class, 'changePassword']);
 });
 
-Route::post('lost/create', [location::class, 'index']);
+//Lost Pet
+Route::post('Lost/change', [LostPetController::class, 'store']);
+Route::get('/Lost', [LostPetController::class, 'index']);
 
-Route::get('Adopt', function () {
-    return view('Adoption', [
-        'title' => "Adoption"
-    ]); 
-});
+//Adoption
+Route::get('Adopt', [AdoptionController::class, 'index']);
+Route::post('Adopt/change', [AdoptionController::class, 'store']);
 
-Route::get('Lost', function () {
-    return view('lost_pet', [
-        'title' => "Lost Pet"
-    ]);
-});
+//Clinic
 
-Auth::routes();
+
+//Tips & Trick
+
+
+//About Us
+

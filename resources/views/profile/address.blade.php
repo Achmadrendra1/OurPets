@@ -4,12 +4,12 @@
     <h3>My Address</h3>
     <div class="underline-title"></div>
     @foreach ($user_loc as $loc)
-    @if(@$loc->email == Auth::user()->email)
+    @if(@$loc->userid == Auth::user()->email)
     <div class="card card-address" style="width: 100%;">
         <div class="card-body">
             <h5 class="card-title">{{ $loc->loc_name}}</h5>
             <p class="card-text">
-                {{ $loc->district}}, ,{{ $loc->city}}, {{ $loc->states}}, {{ $loc->zipcode}}<br />
+                {{ $loc->district}}, {{ $loc->city}}, {{ $loc->states}}, {{ $loc->zipcode}}<br />
                 {{ $loc->latitude}}, {{ $loc->longitude}}<br />
             </p>
             <a href="{{ Request::url() && $loc->id }}" class="card-link">Edit</a>
@@ -33,7 +33,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div> 
+                </div>
                 <form method="post" action="address/create">
                     @csrf
                     <div class="modal-body">
