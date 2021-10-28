@@ -4,6 +4,7 @@
     <h3>My Address</h3>
     <div class="underline-title"></div>
     @foreach ($user_loc as $loc)
+    @if(@$loc->email == Auth::user()->email)
     <div class="card card-address" style="width: 100%;">
         <div class="card-body">
             <h5 class="card-title">{{ $loc->loc_name}}</h5>
@@ -12,10 +13,11 @@
                 {{ $loc->latitude}}, {{ $loc->longitude}}<br />
             </p>
             <a href="{{ Request::url() && $loc->id }}" class="card-link">Edit</a>
-            <a href="{{ Request::url() && $loc->id }}" class="card-link">Delete</a>
+            <a href="{{ url('profile/address/destroy/'. $loc->id) }}" class="btn btn-danger btn-block" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </div>
     </div>
     </br>
+    @endif
     @endforeach
     <div class="text-center m-3">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -31,7 +33,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
+                </div> 
                 <form method="post" action="address/create">
                     @csrf
                     <div class="modal-body">

@@ -22,7 +22,7 @@ class ProfileController extends Controller
         //
         return view('profile.index', ['title' => "Profile"]);
         
-    }
+    } 
 
     public function about()
     {
@@ -65,10 +65,10 @@ class ProfileController extends Controller
         //
         // $request->validate([
         //     'loc_name' => 'required',
-        // ]);
+        // ]); 
 
         $user_location = new UserLocation();
-        $user_location->userid = 11;
+        $user_location->email = 11;
         $user_location->loc_name = $request->locname;
         $user_location->latitude = $request->lat;
         $user_location->longitude = $request->long;
@@ -144,8 +144,9 @@ class ProfileController extends Controller
      * @param  \App\Models\UserLocation  $userLocation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(UserLocation $userLocation)
+    public function destroy($userLocation)
     {
-        //
+        UserLocation::where('id', $userLocation)->delete();
+        return redirect('profile/address');
     }
 }

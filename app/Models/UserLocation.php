@@ -13,14 +13,16 @@ class UserLocation extends Model
     // protected $primaryKey = "id";
 
     protected $fillable = [
-        'userid',
+        'email',
         'loc_name',
         'latitude',
         'longitude',
         'states',
         'city',
+        'district',
         'zipcode',
-        'input_date',
+        'created_at',
+        'updated_at',
         'status'  
     ];
 }
