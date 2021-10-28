@@ -18,8 +18,12 @@ class location extends Controller
         $long = $request->long;
         $lat = $request->lat;
         $respone = Http::get('https://api.mapbox.com/geocoding/v5/mapbox.places/'. $long . ',' . $lat . '.json?country=id&limit=1&access_token=pk.eyJ1IjoiYWNobWFkcmVuZHJhMSIsImEiOiJja3VqdXlwZnkzMXh5MnZuemY0dXlxajd3In0.UI_gQ4TAo_CwXdZVduEIxQ');
-        $jsonBody = $respone->json('features');
-        return json_encode($jsonBody);
+        $features = $respone->json('features');
+        foreach ($features as $value) {
+           $place = $value['place_name'];
+        }
+
+        return $place;
     }
 
     
