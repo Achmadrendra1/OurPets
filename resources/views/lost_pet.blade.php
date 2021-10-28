@@ -23,24 +23,25 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form method="post" action="lost/create">
+                    @csrf
                     <div class="row">
                         <div class="col">
                             <!-- <label>Longitude</label> -->
-                            <input type="hidden" id="long">
+                            <input type="text" id="long" name="long">
                         </div>
                         <div class="col">
                             <!-- <label>Latitude</label> -->
-                            <input type="hidden" id="lat">
+                            <input type="text" id="lat" name="lat">
                         </div>
 
                     </div>
+                    <div id='map' style='width: 420px; height: 300px;'></div>
+                    <div class="text-center mb-4">
+                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
                 </form>
-                <div id='map' style='width: 420px; height: 300px;'></div>
-            </div>
-            <div class="text-center mb-4">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>

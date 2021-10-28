@@ -5,6 +5,7 @@ use App\Http\Controllers\AddingAddressController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\location;
 
 
 /*
@@ -31,6 +32,7 @@ Route::group(['namespace' => 'profile', 'prefix' => 'profile'], function () {
     Route::post('settings/save', [ProfileController::class, 'changePassword']);
 });
 
+Route::post('lost/create', [location::class, 'index']);
 
 
 

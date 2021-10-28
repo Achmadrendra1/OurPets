@@ -12,17 +12,24 @@ class location extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $respone = Http::get('https://api.mapbox.com/geocoding/v5/mapbox.places/106.73692404346377,-6.210795355440595.json?country=id&limit=1&access_token=pk.eyJ1IjoiYWNobWFkcmVuZHJhMSIsImEiOiJja3VqdXlwZnkzMXh5MnZuemY0dXlxajd3In0.UI_gQ4TAo_CwXdZVduEIxQ');
+
+        $long = $request->long;
+        $lat = $request->lat;
+        $respone = Http::get('https://api.mapbox.com/geocoding/v5/mapbox.places/'. $long . ',' . $lat . '.json?country=id&limit=1&access_token=pk.eyJ1IjoiYWNobWFkcmVuZHJhMSIsImEiOiJja3VqdXlwZnkzMXh5MnZuemY0dXlxajd3In0.UI_gQ4TAo_CwXdZVduEIxQ');
+        $jsonBody = $respone->json('features');
+        return json_encode($jsonBody);
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
     }
