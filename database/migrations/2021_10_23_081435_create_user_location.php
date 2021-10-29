@@ -15,7 +15,7 @@ class CreateUserLocation extends Migration
     {
         Schema::create('user_location', function (Blueprint $table) {
             $table->id();
-            $table->string('userid');
+            $table->string('email');
             $table->string('loc_name');
             $table->decimal('latitude');
             $table->decimal('longitude');

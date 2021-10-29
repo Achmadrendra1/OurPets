@@ -25,11 +25,17 @@ class LostPetController extends Controller
             $long1 = $loc['longitude'];
             $lat1 = $loc['latitude'];
         }
+        if (!isset($address)) {
+            $loc = "Alamat Belum Ditambahkan";
+        }
+        else {
+            $loc = $address;
+        }
 
 
         return view('lost_pet', [
             'title' => 'Lost Pet',
-            'location' => $address,
+            'address' => $loc,
             'long' => $long,
             'lat' => $lat,
         ]);

@@ -23,11 +23,16 @@ class AdoptionController extends Controller
             $long1 = $loc['longitude'];
             $lat1 = $loc['latitude'];
         }
+        if (!isset($address)) {
+            $loc = "Alamat Belum Ditambahkan";
+        } else {
+            $loc = $address;
+        }
 
 
         return view('adoption', [
             'title' => 'Adoption',
-            'location' => $address,
+            'location' => $loc,
             'long' => $long,
             'lat' => $lat,
         ]);

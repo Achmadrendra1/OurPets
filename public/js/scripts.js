@@ -17,3 +17,5 @@ $(function () {
         window.location.hash = e.target.hash;
     });
 });
+
+document.addEventListener("touchstart", function () {}, true)

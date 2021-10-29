@@ -47,6 +47,9 @@ Route::get('Adopt', [AdoptionController::class, 'index']);
 Route::post('Adopt/change', [AdoptionController::class, 'store']);
 
 //Clinic
+Route::get('Clinic', function() {
+    return view('clinic', ['title' => 'Clinic']);
+});
 
 
 //Tips & Trick

@@ -5,7 +5,8 @@
 <div class="container" id="loc">
     <div class="row">
         <div class="col-10">
-            <p>{{ Request::is('Lost/change') ? $place : $location }}</p>
+          
+            <p>{{ Request::is('Lost/change') ? $place : $address }}</p>
             
         </div>
         <div class="col">

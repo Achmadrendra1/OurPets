@@ -274,43 +274,33 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-3">
-                <div class="card bg-dark text-white">
-                    <img src="https://media.istockphoto.com/photos/good-dog-picture-id938105034?b=1&k=20&m=938105034&s=170667a&w=0&h=T3KyQg1aSQao7W0OQ-BluAt4q4SwmjLGSLnBOiAmk5s=" height="350" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Greyi</h5>
-                        <p class="card-category-age">Cat | Adult</p>
-                        <p class="card-distance">500 m</p>
+            <div class="col-4">
+                <div class="card-sl mb-3">
+                    <img src="../Images/logo.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card bg-dark text-white">
-                    <img src="https://media.istockphoto.com/photos/cute-kitten-licking-glass-table-with-copy-space-picture-id1293763250?b=1&k=20&m=1293763250&s=170667a&w=0&h=zcK63xxkMVX-ca0d5laTsDxauVUMH62F71MKcbqaGnI=" height="350" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Greyi</h5>
-                        <p class="card-category-age">Cat | Adult</p>
-                        <p class="card-distance">500 m</p>
+            <div class="col-4">
+                <div class="card-sl mb-3">
+                    <img src="../Images/logo.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card bg-dark text-white">
-                    <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=436&q=80" height="350" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Greyi</h5>
-                        <p class="card-category-age">Cat | Adult</p>
-                        <p class="card-distance">500 m</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card bg-dark text-white">
-                    <img src="Images/Foot.svg" height="350">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Greyi</h5>
-                        <p class="card-category-age">Cat | Adult</p>
-                        <p class="card-distance">500 m</p>
+            <div class="col-4">
+                <div class="card-sl mb-3">
+                    <img src="../Images/logo.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>

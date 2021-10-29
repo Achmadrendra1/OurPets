@@ -38,7 +38,7 @@
                     @csrf
                     <div class="modal-body">
                         <label for="locname">Label Address</label>
-                        <input type="text" id="locname" name="locname" value="{{ $user_location->locname }}" required placeholder="Ex: Home, Office" >
+                        <input type="text" id="locname" name="locname" required placeholder="Ex: Home, Office" >
 
                         <label for="street">Street</label>
                         <input type="text" id="street" name="street" required placeholder="Ex: Jl. Meruya Selatan No. 19">
