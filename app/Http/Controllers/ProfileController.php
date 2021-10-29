@@ -65,10 +65,12 @@ class ProfileController extends Controller
         //
         // $request->validate([
         //     'loc_name' => 'required',
-        // ]); 
+        //     'city' => 'required',
+        //     'zipcode' => 'required',
+        // ]);
 
         $user_location = new UserLocation();
-        $user_location->userid = Auth::user()->email;
+        $user_location->email = Auth::user()->email;
         $user_location->loc_name = $request->locname;
         $user_location->latitude = $request->lat;
         $user_location->longitude = $request->long;
@@ -124,6 +126,8 @@ class ProfileController extends Controller
     public function edit(UserLocation $userLocation)
     {
         //
+        $user_location = UserLocation::all();
+        return view('profile.address', ['title' => "Profile", 'user_location' => $user_location]);
     }
 
     /**

@@ -32,6 +32,7 @@ Route::prefix('profile')->group(function () {
     Route::get('/', [ProfileController::class, 'about']);
     Route::post('address/create', [ProfileController::class, 'store']);
     Route::get('address/destroy/{id}', [ProfileController::class ,'destroy'])->name('address.destroy');
+    Route::get('address/edit/{id}', [ProfileController::class ,'edit'])->name('address.edit');
     Route::get('address', [ProfileController::class, 'address']);
     Route::get('settings', [ProfileController::class, 'settings']);
     Route::post('settings/save', [ProfileController::class, 'changePassword']);
