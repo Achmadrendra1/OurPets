@@ -63,7 +63,7 @@
 
                         </div>
                         <label for="map">Pin Your Location</label>
-                        <div id='map_edit' style='width: 420px; height: 300px;'></div>
+                        <div id='map' style='width: 420px; height: 300px;'></div>
 
                     </div>
                     <div class="text-center mb-4">

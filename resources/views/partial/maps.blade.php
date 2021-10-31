@@ -9,6 +9,14 @@
             zoom: 14
         });
 
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWNobWFkcmVuZHJhMSIsImEiOiJja3VqdXlwZnkzMXh5MnZuemY0dXlxajd3In0.UI_gQ4TAo_CwXdZVduEIxQ';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [106.73858120477016, -6.209391837461502, 106],
+            zoom: 14
+        });
+
         // map.addControl(
         //     new MapboxGeocoder({
         //         accessToken: mapboxgl.accessToken,
