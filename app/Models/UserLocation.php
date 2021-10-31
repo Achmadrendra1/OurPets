@@ -19,8 +19,9 @@ class UserLocation extends Model
         'longitude',
         'states',
         'city',
-        'district',
+        'street',
         'zipcode',
+        'country',
         'created_at',
         'updated_at',
         'status'  

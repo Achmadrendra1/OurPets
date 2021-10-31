@@ -31,15 +31,15 @@ class ProfileController extends Controller
 
     public function address()
     {
-        $user_location = UserLocation::all();
-        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_location]);
+        $user_loc = UserLocation::all();
+        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_loc]);
     }
 
 
     public function settings()
     {
-        $user_location = UserLocation::all();
-        return view('profile.setting', ['title' => "Profile", 'user_loc' => $user_location]);
+        $user_loc = UserLocation::all();
+        return view('profile.setting', ['title' => "Profile", 'user_loc' => $user_loc]);
     }
 
 
@@ -71,13 +71,14 @@ class ProfileController extends Controller
 
         $user_location = new UserLocation();
         $user_location->email = Auth::user()->email;
-        $user_location->loc_name = $request->locname;
-        $user_location->latitude = $request->lat;
-        $user_location->longitude = $request->long;
-        $user_location->states = $request->state;
-        $user_location->city = $request->City;
-        $user_location->district = $request->street;
-        $user_location->zipcode = $request->ZipCode;
+        $user_location->loc_name = $request->locname_add;
+        $user_location->latitude = $request->lat_add;
+        $user_location->longitude = $request->long_add;
+        $user_location->states = $request->state_add;
+        $user_location->city = $request->City_add;
+        $user_location->district = $request->street_add;
+        $user_location->zipcode = $request->ZipCode_add;
+        $user_location->country = $request->country_add;
         $user_location->status = "Active";
         $user_location->save();
         return redirect('profile/address');
@@ -123,11 +124,11 @@ class ProfileController extends Controller
      * @param  \App\Models\UserLocation  $userLocation
      * @return \Illuminate\Http\Response
      */
-    public function edit(UserLocation $userLocation)
+    public function edit(UserLocation $user_loc)
     {
         //
-        $user_location = UserLocation::all();
-        return view('profile.address', ['title' => "Profile", 'user_location' => $user_location]);
+        $user_loc = UserLocation::all();
+        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_loc]);
     }
 
     /**
@@ -137,9 +138,12 @@ class ProfileController extends Controller
      * @param  \App\Models\UserLocation  $userLocation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, UserLocation $userLocation)
+    public function update($user_loc)
     {
-        //
+        //        
+        $data = request()->except(['_token']);
+        UserLocation::where('id', $user_loc)->update($data);
+        return redirect('profile/address');
     }
 
     /**

@@ -21,8 +21,9 @@ class CreateUserLocation extends Migration
             $table->decimal('longitude');
             $table->string('states');
             $table->string('city');
-            $table->string('district');
+            $table->string('street');
             $table->string('zipcode');
+            $table->string('country');
             $table->timestamps();
             $table->string('status');
         });
