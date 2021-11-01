@@ -20,26 +20,26 @@ class ProfileController extends Controller
     public function index()
     {
         //
-        return view('profile.index', ['title' => "Profile"]);
+        return view('profile.index', ['title' => "Profile", 'Auth' => '']);
         
     } 
 
     public function about()
     {
-        return view('profile.about', ['title' => "Profile"]);
+        return view('profile.about', ['title' => "Profile", 'Auth' => '']);
     }
 
     public function address()
     {
         $user_loc = UserLocation::all();
-        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_loc]);
+        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_loc , 'Auth' => '']);
     }
 
 
     public function settings()
     {
         $user_loc = UserLocation::all();
-        return view('profile.setting', ['title' => "Profile", 'user_loc' => $user_loc]);
+        return view('profile.setting', ['title' => "Profile", 'user_loc' => $user_loc , 'Auth' => '']);
     }
 
 

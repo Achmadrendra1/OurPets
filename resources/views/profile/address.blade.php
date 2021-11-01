@@ -1,5 +1,8 @@
 @extends('profile.index')
 @section('profile')
+@if($Auth == null)
+@url('/')
+@else
 <div id="aboutme" class="tab-pane fade show active">
     <h3>My Address</h3>
     <div class="underline-title"></div>
@@ -141,4 +144,5 @@
         </div>
     </div>
 </div>
+@endif
 @endsection
