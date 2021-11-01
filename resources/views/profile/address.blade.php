@@ -1,8 +1,18 @@
 @extends('profile.index')
 @section('profile')
-@if($Auth == null)
-@url('/')
-@else
+<script>    
+$.ajax({
+    type: "POST",
+    url: "/profile/address",
+    data: '[{user_loc}]',
+    contentType: "json",
+    processData: false,
+    success:function(data) {
+        $('#save_message').html(data.message);
+    } 
+});
+window.alert("data");
+</script>
 <div id="aboutme" class="tab-pane fade show active">
     <h3>My Address</h3>
     <div class="underline-title"></div>
@@ -66,7 +76,7 @@
 
                         </div>
                         <label for="map">Pin Your Location</label>
-                        <div id='map' style='width: 420px; height: 300px;'></div>
+                        <div id='map_edit' style='width: 420px; height: 300px;'></div>
 
                     </div>
                     <div class="text-center mb-4">
@@ -132,7 +142,7 @@
 
                         </div>
                         <label for="map">Pin Your Location</label>
-                        <div id='map' style='width: 420px; height: 300px;'></div>
+                        <div id='map_add' style='width: 420px; height: 300px;'></div>
 
                     </div>
                     <div class="text-center mb-4">
@@ -144,5 +154,4 @@
         </div>
     </div>
 </div>
-@endif
 @endsection

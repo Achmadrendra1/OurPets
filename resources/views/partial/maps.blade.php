@@ -1,34 +1,26 @@
 <div>
     @push('scripts')
     <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYWNobWFkcmVuZHJhMSIsImEiOiJja3VqdXlwZnkzMXh5MnZuemY0dXlxajd3In0.UI_gQ4TAo_CwXdZVduEIxQ';
-        const map = new mapboxgl.Map({
-            container: 'map',
+        mapboxgl.accessToken = 'pk.eyJ1IjoicmFzaWRreSIsImEiOiJja3ZncnZiemIxdGdyMm9ueXNibjg0cjg1In0.DK7Qo3EufeJPqMUXHAR3cw';
+        var map_edit = new mapboxgl.Map({
+            container: 'map_edit',
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [106.73858120477016, -6.209391837461502, 106],
             zoom: 14
         });
 
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYWNobWFkcmVuZHJhMSIsImEiOiJja3VqdXlwZnkzMXh5MnZuemY0dXlxajd3In0.UI_gQ4TAo_CwXdZVduEIxQ';
-        const map = new mapboxgl.Map({
-            container: 'map',
+        var map_add = new mapboxgl.Map({
+            container: 'map_add',
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [106.73858120477016, -6.209391837461502, 106],
             zoom: 14
         });
-
-        // map.addControl(
-        //     new MapboxGeocoder({
-        //         accessToken: mapboxgl.accessToken,
-        //         mapboxgl: mapboxgl
-        //     })
-        // );
 
         const marker = new mapboxgl.Marker({
                 draggable: true
             })
             .setLngLat([106.73858120477016, -6.209391837461502, 106])
-            .addTo(map);
+            .addTo(map_add);
 
         function onDragEnd() {
             const lngLat = marker.getLngLat();
@@ -43,5 +35,12 @@
         }
 
         marker.on('dragend', onDragEnd)
+        
+        // map.addControl(
+        //     new MapboxGeocoder({
+        //         accessToken: mapboxgl.accessToken,
+        //         mapboxgl: mapboxgl
+        //     })
+        // );
     </script>
 </div>

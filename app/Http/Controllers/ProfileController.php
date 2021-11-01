@@ -33,6 +33,7 @@ class ProfileController extends Controller
     {
         $user_loc = UserLocation::all();
         return view('profile.address', ['title' => "Profile", 'user_loc' => $user_loc , 'Auth' => '']);
+        return $user_loc->toJson();
     }
 
 
