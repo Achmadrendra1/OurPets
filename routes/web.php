@@ -20,6 +20,7 @@ use App\Http\Controllers\LostPetController;
 
 //Auth
 Auth::routes();
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
 //Home
 Route::get('/', [HomeController::class, 'index']);

@@ -21,4 +21,9 @@ class HomeController extends Controller
     {
         return view('home', ['title' => "Home"]);
     }
+
+    public function adminHome()
+    {
+        return view('Admin.index');
+    }
 }
