@@ -43,6 +43,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    
+
     public function PetModel()
     {
         // Setiap user akan memiliki banyak data

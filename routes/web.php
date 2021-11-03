@@ -20,10 +20,20 @@ use App\Http\Controllers\LostPetController;
 
 //Auth
 Auth::routes();
-Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+
+// Admin
+Route::prefix('admin')->group(function () {
+    Route::get('/', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+    Route::get('user', [HomeController::class, 'user']);
+    Route::get('clinic', [HomeController::class, 'clinic']);
+    Route::get('tips', [HomeController::class, 'tips']);
+    Route::get('adopt', [HomeController::class, 'adopt']);
+    Route::get('lost', [HomeController::class, 'lost']);
+
+});
 
 //Home
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //MyPet
 Route::resource('pet',PetController::class);

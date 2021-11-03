@@ -65,12 +65,18 @@
                         @else
                         <div class="d-flex">
 
-                            <a class="btn btn-login text-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <a class="dropdown-item" type="button" href="{{ URL::to('profile') }}">Profile</a>
                                 <a class="dropdown-item" type="button" href="{{ URL::to('pet') }}">My Pet</a>
+                                @if (Auth::user()->is_admin === 1)
+                                <a class="dropdown-item" type="button" href="{{ URL::to('admin') }}">Switch To Admin Page</a>
+                                @endif
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}

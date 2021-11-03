@@ -24,6 +24,27 @@ class HomeController extends Controller
 
     public function adminHome()
     {
-        return view('Admin.index');
+        return view('Admin.index', ['title' => "Admin"]);
+    }
+
+    public function user()
+    {
+        return view('Admin.user', ['title' => "Admin - User"]);
+    }
+    public function tips()
+    {
+        return view('Admin.tips', ['title' => "Admin - Tips & Trick"]);
+    }
+    public function adopt()
+    {
+        return view('Admin.adopt', ['title' => "Admin - Adoption"]);
+    }
+    public function lost()
+    {
+        return view('Admin.lost', ['title' => "Admin - Lost Pet"]);
+    }
+    public function clinic()
+    {
+        return view('Admin.clinic', ['title' => "Admin - Clinic"]);
     }
 }
