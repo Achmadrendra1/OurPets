@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -29,7 +30,8 @@ class HomeController extends Controller
 
     public function user()
     {
-        return view('Admin.user', ['title' => "Admin - User"]);
+    $user = user::all();
+        return view('Admin.user', ['title' => "Admin - User", 'user' => $user]);
     }
     public function tips()
     {

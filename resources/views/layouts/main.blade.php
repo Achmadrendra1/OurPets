@@ -71,7 +71,7 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <a class="dropdown-item" type="button" href="{{ URL::to('profile') }}">Profile</a>
                                 <a class="dropdown-item" type="button" href="{{ URL::to('pet') }}">My Pet</a>
-                                @if (Auth::user()->is_admin === 1)
+                                @if (Auth::user()->is_admin == 1)
                                 <a class="dropdown-item" type="button" href="{{ URL::to('admin') }}">Switch To Admin Page</a>
                                 @endif
                                 <li>
