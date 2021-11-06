@@ -2,8 +2,7 @@
     @push('scripts')
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoicmFzaWRreSIsImEiOiJja3ZncnZiemIxdGdyMm9ueXNibjg0cjg1In0.DK7Qo3EufeJPqMUXHAR3cw';
-        var long = document.getElementById("long_edit").value;
-        var lat = document.getElementById("lat_edit").value;
+
 
         var map_add = new mapboxgl.Map({
             container: 'map_add',
@@ -15,7 +14,7 @@
         var marker = new mapboxgl.Marker({
                 draggable: true
             })
-            .setLngLat([long, lat])
+            .setLngLat([106.73858120477016, -6.209391837461502])
             .addTo(map_add);
 
         function onDragEnd() {
@@ -31,6 +30,9 @@
         }
 
         marker.on('dragend', onDragEnd);
+
+        var long = document.getElementById("long_edit").value;
+        var lat = document.getElementById("lat_edit").value;
 
         const map_edit = new mapboxgl.Map({
             container: 'map_edit',

@@ -11,11 +11,7 @@
                 {{ $loc->street}}, {{ $loc->city}}, {{ $loc->states}}, {{ $loc->zipcode}}<br />
                 {{ $loc->latitude}}, {{ $loc->longitude}}<br />
             </p>
-<<<<<<< HEAD
-            <a href="{{ url('profile/address/edit/'. $loc->id) }}" class="btn btn-primary btn-block" data-toggle="modal" class="card-link" data-target="#EditAddress">Edit</a>
-=======
             <a href="{{ url('profile/address/edit/'. $loc->id) }}"  class="btn btn-primary btn-block" data-toggle="modal" class="card-link" data-target="#EditAddress{{ $loc->id }}">Edit</a>
->>>>>>> 15656557115a8966276288523571c4f62f2d5b29
             <a href="{{ url('profile/address/destroy/'. $loc->id) }}" class="btn btn-danger btn-block" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </div>
     </div>

@@ -29,13 +29,13 @@
                     @csrf
                     <div class="row">
                         <div class="col">
-                            <!-- <label>Longitude</label> -->
-                            <input type="hidden" value="{{ $long }}" id="long_edit" name="long_edit">
+                            <!-- <label>Longitude</label> value=" $long " -->
+                            <input type="hidden" id="long_edit" name="long_edit">
                             <input type="hidden" id="long" name="long">
                         </div>
                         <div class="col">
-                            <!-- <label>Latitude</label> -->
-                            <input type="hidden" value="{{ $lat }}" id="lat_edit" name="lat_edit">
+                            <!-- <label>Latitude</label> value=" $lat "-->
+                            <input type="hidden" id="lat_edit" name="lat_edit">
                             <input type="hidden" id="lat" name="lat">
                         </div>
 

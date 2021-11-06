@@ -31,12 +31,14 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         $user_loc = UserLocation::where('email', '=', $user->email)->get();
-        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_loc, $user_loc->toJson()]);
+        $json = json_decode($user_loc);
+        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_loc, 'json' => $json]);
     }
 
 
     public function settings()
     {
+        $user = Auth::user();
         $user_loc = UserLocation::where('email', '=', $user->email)->get();
         return view('profile.setting', ['title' => "Profile", 'user_loc' => $user_loc]);
     }

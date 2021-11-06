@@ -36,8 +36,8 @@ class LostPetController extends Controller
         return view('lost_pet', [
             'title' => 'Lost Pet',
             'address' => $loc,
-            'long' => $long1,
-            'lat' => $lat1,
+            // 'long' => $long1,
+            // 'lat' => $lat1,
         ]);
     }
 
