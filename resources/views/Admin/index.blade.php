@@ -29,7 +29,7 @@
         <div class="col-lg-3 col-sm-6">
             <div class="card-box bg-green">
                 <div class="inner">
-                    <h3> ?? </h3>
+                    <h3> {{ $clinic }} </h3>
                     <p> Clinic </p>
                 </div>
                 <div class="icon">

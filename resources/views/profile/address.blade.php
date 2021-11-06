@@ -12,7 +12,7 @@
                 {{ $loc->street}}, {{ $loc->city}}, {{ $loc->states}}, {{ $loc->zipcode}}<br />
                 {{ $loc->latitude}}, {{ $loc->longitude}}<br />
             </p>
-            <a href="{{ url('profile/address/edit/'. $loc->id) }}"  class="btn btn-primary btn-block" data-toggle="modal" class="card-link" data-target="#EditAddress">Edit</a>
+            <a href="{{ url('profile/address/edit/'. $loc->id) }}" class="btn btn-primary btn-block" data-toggle="modal" class="card-link" data-target="#EditAddress">Edit</a>
             <a href="{{ url('profile/address/destroy/'. $loc->id) }}" class="btn btn-danger btn-block" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </div>
     </div>
@@ -29,7 +29,7 @@
                     @csrf
                     <div class="modal-body">
                         <label for="locname">Label Address</label>
-                        <input type="text" id="locname" value="{{ $loc->loc_name }}" name="loc_name" required placeholder="Ex: Home, Office" >
+                        <input type="text" id="locname" value="{{ $loc->loc_name }}" name="loc_name" required placeholder="Ex: Home, Office">
 
                         <label for="street">Street</label>
                         <input type="text" id="street" value="{{ $loc->street }}" name="street" required placeholder="Ex: Jl. Meruya Selatan No. 19">
@@ -88,15 +88,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Add Address</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="POST" action="address/create">
                     @csrf
                     <div class="modal-body">
                         <label for="locname">Label Address</label>
-                        <input type="text" id="locname" name="locname_add" required placeholder="Ex: Home, Office" >
+                        <input type="text" id="locname" name="locname_add" required placeholder="Ex: Home, Office">
 
                         <label for="street">Street</label>
                         <input type="text" id="street" name="street_add" required placeholder="Ex: Jl. Meruya Selatan No. 19">

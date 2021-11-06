@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ClinicModel;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -20,12 +21,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
         return view('home', ['title' => "Home"]);
     }
 
     public function adminHome()
     {
-        return view('Admin.index', ['title' => "Admin"]);
+        $clinic = ClinicModel::count();
+        return view('Admin.index', ['title' =>"Admin", 'clinic' => $clinic]);
     }
 
     public function user()
@@ -47,6 +50,21 @@ class HomeController extends Controller
     }
     public function clinic()
     {
-        return view('Admin.clinic', ['title' => "Admin - Clinic"]);
+        $clinic = ClinicModel::all();
+        return view('Admin.clinic', ['title' => "Admin - Clinic", 'clinic' => $clinic]);
+    }
+
+    public function storeClinic(Request $request)
+    {
+
+        $add_clinic = new ClinicModel();
+        $add_clinic->name = $request->name_clinic;
+        $add_clinic->address = $request->address_clinic;
+        $add_clinic->long = $request->long_clinic;
+        $add_clinic->lat = $request->lat_clinic;
+        $add_clinic->info = $request->info_clinic;
+        $add_clinic->photo = $request->photo;
+        $add_clinic->save();
+        return redirect('admin/clinic');
     }
 }

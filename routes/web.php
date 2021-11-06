@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdoptionController;
+use App\Http\Controllers\ClinicController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProfileController;
@@ -29,6 +30,7 @@ Route::prefix('admin')->group(function () {
     Route::get('tips', [HomeController::class, 'tips']);
     Route::get('adopt', [HomeController::class, 'adopt']);
     Route::get('lost', [HomeController::class, 'lost']);
+    Route::post('clinic/add', [HomeController::class, 'storeClinic']);
 
 });
 
@@ -58,12 +60,8 @@ Route::get('Adopt', [AdoptionController::class, 'index']);
 Route::post('Adopt/change', [AdoptionController::class, 'store']);
 
 //Clinic
-Route::get('Clinic', function() {
-    return view('clinic', ['title' => 'Clinic']);
-});
-
 Route::prefix('Clinic')->group(function () {
-    Route::get('Clinic', [ClinicController::class, 'clinic']);
+    Route::get('/', [ClinicController::class, 'index']);
 });
 
 
