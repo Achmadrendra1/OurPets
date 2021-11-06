@@ -23,7 +23,7 @@ use App\Http\Controllers\LostPetController;
 Auth::routes();
 
 // Admin
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
     Route::get('user', [HomeController::class, 'user']);
     Route::get('clinic', [HomeController::class, 'clinic']);
@@ -41,7 +41,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::resource('pet',PetController::class);
 
 //Profile
-Route::prefix('profile')->group(function () {
+Route::prefix('profile')->middleware('auth')->group(function () {
     Route::get('/', [ProfileController::class, 'about']);
     Route::post('address/create', [ProfileController::class, 'store']);
     Route::get('address/destroy/{id}', [ProfileController::class ,'destroy']);
