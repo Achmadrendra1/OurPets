@@ -4,7 +4,6 @@
     <h3>My Address</h3>
     <div class="underline-title"></div>
     @foreach ($user_loc as $loc)
-    @if(@$loc->email == Auth::user()->email)
     <div class="card card-address" style="width: 100%;">
         <div class="card-body">
             <h5 class="card-title">{{ $loc->loc_name}}</h5>
@@ -12,11 +11,11 @@
                 {{ $loc->street}}, {{ $loc->city}}, {{ $loc->states}}, {{ $loc->zipcode}}<br />
                 {{ $loc->latitude}}, {{ $loc->longitude}}<br />
             </p>
-            <a href="{{ url('profile/address/edit/'. $loc->id) }}"  class="btn btn-primary btn-block" data-toggle="modal" class="card-link" data-target="#EditAddress">Edit</a>
+            <a href="{{ url('profile/address/edit/'. $loc->id) }}"  class="btn btn-primary btn-block" data-toggle="modal" class="card-link" data-target="#EditAddress{{ $loc->id }}">Edit</a>
             <a href="{{ url('profile/address/destroy/'. $loc->id) }}" class="btn btn-danger btn-block" onclick="return confirm('Are you sure to delete?')">Delete</a>
         </div>
     </div>
-    <div class="modal fade" id="EditAddress" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="EditAddress{{ $loc->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -75,7 +74,6 @@
         </div>
     </div>
     </br>
-    @endif
     @endforeach
     <div class="text-center m-3">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NewAddress">

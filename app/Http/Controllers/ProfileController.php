@@ -15,32 +15,30 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
-     
+
     public function index()
     {
         //
-        return view('profile.index', ['title' => "Profile", 'Auth' => '']);
-        
+        return view('profile.index', ['title' => "Profile"]);
     } 
 
     public function about()
     {
-        return view('profile.about', ['title' => "Profile", 'Auth' => '']);
+        return view('profile.about', ['title' => "Profile"]);
     }
 
     public function address()
     {
-        $user_loc = UserLocation::all();
-        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_loc , 'Auth' => '']);
-        return $user_loc->toJson();
+        $user = Auth::user();
+        $user_loc = UserLocation::where('email', '=', $user->email)->get();
+        return view('profile.address', ['title' => "Profile", 'user_loc' => $user_loc, $user_loc->toJson()]);
     }
 
 
     public function settings()
     {
-        $user_loc = UserLocation::all();
-        return view('profile.setting', ['title' => "Profile", 'user_loc' => $user_loc , 'Auth' => '']);
+        $user_loc = UserLocation::where('email', '=', $user->email)->get();
+        return view('profile.setting', ['title' => "Profile", 'user_loc' => $user_loc]);
     }
 
 

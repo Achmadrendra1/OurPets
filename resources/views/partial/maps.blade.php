@@ -32,7 +32,7 @@
 
         marker.on('dragend', onDragEnd);
 
-        var map_edit = new mapboxgl.Map({
+        const map_edit = new mapboxgl.Map({
             container: 'map_edit',
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [long, lat],
