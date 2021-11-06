@@ -5,9 +5,9 @@
 <div class="container" id="loc">
     <div class="row">
         <div class="col-10">
-          
+
             <p>{{ Request::is('Lost/change') ? $place : $address }}</p>
-            
+
         </div>
         <div class="col">
             <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Change Location</button>
@@ -30,15 +30,17 @@
                     <div class="row">
                         <div class="col">
                             <!-- <label>Longitude</label> -->
+                            <input type="hidden" value="{{ $long }}" id="long_edit" name="long_edit">
                             <input type="hidden" id="long" name="long">
                         </div>
                         <div class="col">
                             <!-- <label>Latitude</label> -->
+                            <input type="hidden" value="{{ $lat }}" id="lat_edit" name="lat_edit">
                             <input type="hidden" id="lat" name="lat">
                         </div>
 
                     </div>
-                    <div id='map' style='width: 420px; height: 300px;'></div>
+                    <div id='map_add' style='width: 420px; height: 300px;'></div>
                     <div class="text-center mb-4">
                         <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Save changes</button>

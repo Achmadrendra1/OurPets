@@ -51,7 +51,7 @@ Route::prefix('profile')->group(function () {
 
 //Lost Pet
 Route::post('Lost/change', [LostPetController::class, 'store']);
-Route::get('/Lost', [LostPetController::class, 'index']);
+Route::get('Lost', [LostPetController::class, 'index']);
 
 //Adoption
 Route::get('Adopt', [AdoptionController::class, 'index']);

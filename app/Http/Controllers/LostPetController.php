@@ -36,8 +36,8 @@ class LostPetController extends Controller
         return view('lost_pet', [
             'title' => 'Lost Pet',
             'address' => $loc,
-            'long' => $long,
-            'lat' => $lat,
+            'long' => $long1,
+            'lat' => $lat1,
         ]);
     }
 
@@ -61,6 +61,13 @@ class LostPetController extends Controller
     {
         $long = $request->long;
         $lat = $request->lat;
+        $user_loc = UserLocation::all();
+        foreach ($user_loc as $loc) {
+            // $address = $loc['loc_name'] . " : " . $loc['district'] . ", " . $loc['city'] . ", " . $loc['zipcode'];
+            $long1 = $loc['longitude'];
+            $lat1 = $loc['latitude'];
+        }
+
         $respone = Http::get('https://api.mapbox.com/geocoding/v5/mapbox.places/' . $long . ',' . $lat . '.json?country=id&limit=1&access_token=pk.eyJ1IjoiYWNobWFkcmVuZHJhMSIsImEiOiJja3VqdXlwZnkzMXh5MnZuemY0dXlxajd3In0.UI_gQ4TAo_CwXdZVduEIxQ');
         $features = $respone->json('features');
         foreach ($features as $value) {
@@ -69,7 +76,9 @@ class LostPetController extends Controller
 
         return view('lost_pet', [
             'title' => 'Lost Pet',
-            'place' => $place
+            'place' => $place,
+            'long' => $long1,
+            'lat' => $lat1,
         ]);
     }
 
