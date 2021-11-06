@@ -1,6 +1,7 @@
 <div>
     @push('scripts')
     <script>
+        
         var long = document.getElementById("long_edit").value;
         var lat = document.getElementById("lat_edit").value;
 
@@ -19,7 +20,14 @@
             zoom: 14
         });
 
-        var marker = new mapboxgl.Marker({
+        const map_clinic = new mapboxgl.Map({
+            container: 'map_clinic',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [106.73858120477016, -6.209391837461502, 106],
+            zoom: 14
+        });
+
+       var marker = new mapboxgl.Marker({
                 draggable: true
             })
             .setLngLat([long, lat])
@@ -27,7 +35,7 @@
 
         var marker_edit= new mapboxgl.Marker()
             .setLngLat([long, lat])
-            .addTo(map_edit);
+            .addTo(map_edit); 
 
         function onDragEnd() {
             const lngLat = marker.getLngLat();
@@ -41,13 +49,6 @@
             GetData();
         }
 
-        marker.on('dragend', onDragEnd)
-
-        // map.addControl(
-        //     new MapboxGeocoder({
-        //         accessToken: mapboxgl.accessToken,
-        //         mapboxgl: mapboxgl
-        //     })
-        // );
+        marker.on('dragend', onDragEnd);
     </script>
 </div>

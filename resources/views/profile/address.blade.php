@@ -1,18 +1,5 @@
 @extends('profile.index')
 @section('profile')
-<script>    
-$.ajax({
-    type: "POST",
-    url: "/profile/address",
-    data: '[{user_loc}]',
-    contentType: "json",
-    processData: false,
-    success:function(data) {
-        $('#save_message').html(data.message);
-    } 
-});
-window.alert("data");
-</script>
 <div id="aboutme" class="tab-pane fade show active">
     <h3>My Address</h3>
     <div class="underline-title"></div>
@@ -121,7 +108,7 @@ window.alert("data");
                         <input type="text" id="state" name="state_add" required placeholder="Ex: DKI Jakarta">
 
                         <label for="country">Country</label>
-                        <select id="country" name="country">
+                        <select id="country" name="country_add">
                             <option value="Indonesia">Indonesia</option>
                             <option value="Malaysia">Malaysia</option>
                             <option value="Singapore">Singapore</option>

@@ -77,7 +77,7 @@ class ProfileController extends Controller
         $user_location->longitude = $request->long_add;
         $user_location->states = $request->state_add;
         $user_location->city = $request->City_add;
-        $user_location->district = $request->street_add;
+        $user_location->street = $request->street_add;
         $user_location->zipcode = $request->ZipCode_add;
         $user_location->country = $request->country_add;
         $user_location->status = "Active";

@@ -62,6 +62,10 @@ Route::get('Clinic', function() {
     return view('clinic', ['title' => 'Clinic']);
 });
 
+Route::prefix('Clinic')->group(function () {
+    Route::get('Clinic', [ClinicController::class, 'clinic']);
+});
+
 
 //Tips & Trick
 
