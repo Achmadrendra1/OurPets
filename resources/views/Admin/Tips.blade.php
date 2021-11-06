@@ -23,6 +23,7 @@
                         <th scope="col">Title Post</th>
                         <th scope="col">Description</th>
                         <th scope="col">Create Time</th>
+                        <th scope="col">Author</th>
                         <th scope="col">Photo</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -30,6 +31,7 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

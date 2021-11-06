@@ -1,7 +1,6 @@
 @extends('layouts.Admin')
 @section('admin')
 <h6 class="m-4">Admin</h6>
-<div class="container" id="card-admin">
     <div class="row">
         <div class="col-lg-3 col-sm-6">
             <div class="card-box bg-blue">
@@ -52,6 +51,5 @@
             </div>
         </div>
     </div>
-</div>
 
 @endsection

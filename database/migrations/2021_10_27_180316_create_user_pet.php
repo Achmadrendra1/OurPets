@@ -19,8 +19,6 @@ class CreateUserPet extends Migration
             $table->string('petname');
             $table->string('animal');
             $table->string('breed');
-            $table->integer('weight');
-            $table->integer('height');
             $table->string('color');
             $table->date('date_birth');
             $table->string('gender');

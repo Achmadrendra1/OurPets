@@ -42,11 +42,16 @@ main {
   margin: 0;
 }
 
-.col.section{
+
+.section{
   padding: 0;
   margin: 0;
+  width: 75%;
 }
 
+.sidebars{
+  width: 25%;
+}
 .dropdown-toggle { outline: 0; }
 
 .nav-flush .nav-link {
@@ -130,9 +135,8 @@ main {
 }
 
 .card-box:hover .icon i {
+  position: relative;
     font-size: 100px;
-    transition: 1s;
-    -webkit-transition: 1s;
 }
 
 .card-box .inner {
