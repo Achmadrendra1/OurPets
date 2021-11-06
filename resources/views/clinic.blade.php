@@ -3,7 +3,7 @@
 @section('content')
 <h2 class="text-center m-4">Clinic Nearby You</h2>
 <!-- parsing json -->
-<?php $test = json_encode($clinic) ?>
+<?php $test = $clinic ?>
 <input type="hidden" id="json" value="{{ $test }}">
 <div class="container">
     <div class="row">
@@ -26,7 +26,7 @@
                                     <span class="clinic-title">{{ $u -> name }}</span><br />
                                     <span class="clinic-address">{{ $u -> address }}</span></br>
                                     <span class="clinic-info">{{ $u -> info }}</span>
-                                    <input type="hidden" id="long_clinic" value="{{ $u->long }}">
+                                    <input type="text" id="long_clinic">
                                     <input type="hidden" id="lat_clinic" value="{{ $u->lat }}">
 
                                     <br /><br />
