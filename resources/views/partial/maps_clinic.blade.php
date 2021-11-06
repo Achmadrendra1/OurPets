@@ -6,6 +6,12 @@
         var long = document.getElementById("long_clinic").value;
         var lat = document.getElementById("lat_clinic").value;
 
+        var data = document.getElementById("json").value;
+        var array = JSON.parse(data);
+        console.log(array);
+
+
+
 
         var map_clinic = new mapboxgl.Map({
             container: 'map_clinic',
@@ -14,7 +20,6 @@
             zoom: 14
         });
 
-        // looping long lat dari db clinic buat disini
         var marker = new mapboxgl.Marker()
             .setLngLat([long, lat])
             .addTo(map_clinic);

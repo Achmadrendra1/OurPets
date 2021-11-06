@@ -15,6 +15,7 @@ class ClinicController extends Controller
     public function index()
     {
         $clinic = ClinicModel::all();
+        // dd($json);
         return view('clinic', ['title' => "Clinic", 'clinic' => $clinic]);
     }
 

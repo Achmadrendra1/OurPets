@@ -2,9 +2,6 @@
 @section('admin')
 <div class="m-4">
     <div class="row justify-content-between mb-4">
-        <div class="col">
-            <h6>Admin/Clinic</h6>
-        </div>
         <div class="col-2">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NewClinic">
                 + Add Clinic
@@ -95,6 +92,7 @@
                 @endforeach
 
             </tbody>
+
         </table>
         <!-- Table -->
 

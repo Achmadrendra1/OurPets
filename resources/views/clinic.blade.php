@@ -2,6 +2,9 @@
 
 @section('content')
 <h2 class="text-center m-4">Clinic Nearby You</h2>
+<!-- parsing json -->
+<?php $test = json_encode($clinic) ?>
+<input type="hidden" id="json" value="{{ $test }}">
 <div class="container">
     <div class="row">
         <div class="col">
