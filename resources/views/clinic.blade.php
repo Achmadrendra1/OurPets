@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div id='map' style='width: 100%; height: 500px;'></div>
+            <div id='map_edit' style='width: 100%; height: 500px;'></div>
         </div>
         <div class="col">
             <nav class="clinic">
