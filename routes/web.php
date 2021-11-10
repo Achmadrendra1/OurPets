@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LostPetController;
+use App\Http\Controllers\tipsntrickController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,9 @@ Route::prefix('Clinic')->group(function () {
 
 
 //Tips & Trick
+Route::prefix('tipsntrick')->group(function () {
+    Route::get('/', [tipsntrickController::class, 'index']);
+});
 
 
 //About Us

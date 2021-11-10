@@ -45,7 +45,7 @@
                             <a class="nav-link px-md-4" href="{{ URL::to('Clinic') }}">Clinic</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-md-4" href="{{ URL::to('Tips') }}">Tips & Trick</a>
+                            <a class="nav-link px-md-4" href="{{ URL::to('tipsntrick') }}">Tips & Trick</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link px-md-4" href="{{ URL::to('AboutUs') }}">About</a>
