@@ -3,8 +3,10 @@
 @section('content')
 <h2 class="text-center m-4">Clinic Nearby You</h2>
 <!-- parsing json -->
-<?php $test = $clinic ?>
-<input type="hidden" id="json" value="{{ $test }}">
+@foreach ($user_loc as $loc_center)
+<input type="hidden" id="long_user" value="{{ $loc_center->longitude }}">
+<input type="hidden" id="lat_user" value="{{ $loc_center->latitude }}">
+@endforeach
 <div class="container">
     <div class="row">
         <div class="col">
@@ -26,9 +28,8 @@
                                     <span class="clinic-title">{{ $u -> name }}</span><br />
                                     <span class="clinic-address">{{ $u -> address }}</span></br>
                                     <span class="clinic-info">{{ $u -> info }}</span>
-                                    <input type="text" id="long_clinic">
+                                    <input type="hidden" id="long_clinic" value="{{ $u->long }}">
                                     <input type="hidden" id="lat_clinic" value="{{ $u->lat }}">
-
                                     <br /><br />
                                     <img src="../Images/pin.png" height="15px" width="15px">
                                     <span class="clinic-distance">Jarak</span></img>

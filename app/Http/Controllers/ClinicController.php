@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ClinicModel;
+use App\Models\UserLocation;
 use Illuminate\Http\Request;
 
 class ClinicController extends Controller
@@ -15,8 +16,9 @@ class ClinicController extends Controller
     public function index()
     {
         $clinic = ClinicModel::all();
-        // dd($json);
-        return view('clinic', ['title' => "Clinic", 'clinic' => $clinic]);
+        $user_loc = UserLocation::all();
+        // dd($user_loc);
+        return view('clinic', ['title' => "Clinic", 'clinic' => $clinic, 'user_loc' => $user_loc]);
     }
 
     /**
