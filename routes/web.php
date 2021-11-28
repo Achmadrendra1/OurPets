@@ -39,7 +39,13 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //MyPet
-Route::resource('pet',PetController::class);
+Route::prefix('pet')->middleware('auth')->group(function () {
+    Route::get('/', [PetController::class, 'index']);
+    Route::post('add_pet', [PetController::class, 'store']);
+    Route::get('destroy/{id}', [PetController::class ,'destroy']);
+    Route::post('update/{id}', [PetController::class ,'update']);
+    Route::get('detail/{id}', [PetController::class, 'detail']);
+});
 
 //Profile
 Route::prefix('profile')->middleware('auth')->group(function () {
@@ -53,8 +59,11 @@ Route::prefix('profile')->middleware('auth')->group(function () {
 });
 
 //Lost Pet
-Route::post('Lost/change', [LostPetController::class, 'store']);
-Route::get('Lost', [LostPetController::class, 'index']);
+Route::prefix('lost_pet')->middleware('auth')->group(function () {
+    Route::post('Lost/change', [LostPetController::class, 'store']);
+    Route::get('Lost', [LostPetController::class, 'index']);
+});
+
 
 //Adoption
 Route::get('Adopt', [AdoptionController::class, 'index']);

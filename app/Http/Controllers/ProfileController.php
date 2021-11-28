@@ -139,7 +139,7 @@ class ProfileController extends Controller
      * @param  \App\Models\UserLocation  $userLocation
      * @return \Illuminate\Http\Response
      */
-    public function update($user_loc)
+    public function update($user_loc) 
     {
         //        
         $data = request()->except(['_token']);

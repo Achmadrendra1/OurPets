@@ -2,33 +2,23 @@
 
 @section('content')
 <h2 class="text-center m-4">My Pet</h2>
-@foreach ($all_pet as $pet)
-     @if ($pet->user->id == Auth::user()->id)
-<div class="card card-mypet m-4" style="width: 95%;">
-    <div class="card-body">
-        <div class="row ">
-            <div class="col-2">
-                <img src=" {{ asset('storage/' . $pet->photo) }} " height="200px" />
-               
-            </div>
-            <div class="col">
-                <h5 class="card-title">{{ $pet-> petname }} </h5>
-                <p class="card-text">
-                    Age<br />
-                    {{ $pet->animal }} <br />
-                    {{ $pet->gender }} <br />
-                    {{ $pet->breed }} <br />
-                    {{ $pet->color }} <br />
-                </p>
-                <a href="#" class="card-link">Edit</a>
-                <a href="#" class="card-link">Delete</a>
-            </div>
+
+<div class="card card-mypet m-4">
+<div class="card-deck">
+    @foreach ($all_pet as $pet) 
+    @if ($pet->user->id == Auth::user()->id)
+    <div class="card">
+        <img class="card-img-top" src="{{ asset('storage/my_pet/'.$pet->photo) }}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{ $pet-> petname }}</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
-        <a href="detail" class="stretched-link"></a>
     </div>
+    @endif
+    @endforeach
 </div>
-@endif
-@endforeach
+</div>
 
 <div class="text-center m-4">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -46,7 +36,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="/pet" enctype="multipart/form-data">
+                <form method="POST" action="pet/add_pet" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                     <label for="petName">Pet Name</label>
@@ -83,12 +73,8 @@
                     <div class="form-group">
                     <div class="row">
                         <div class="col">
-                            <label for="birthDate">Birth Month</label>
-                            <input type="text" id="month" name="month" placeholder="Ex : May">
-                        </div>
-                        <div class="col">
-                            <label for="birthYear">Birth Year</label>
-                            <input type="text" id="year" name="year" placeholder="Ex : 2019">
+                            <label for="birthDate">Date Birth</label>
+                            <input type="date" class="form-control" id="date_birth" name="date_birth" placeholder="Ex : May">
                         </div>
                     </div>
                     </div>

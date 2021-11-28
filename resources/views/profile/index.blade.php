@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <div class="container profile">
     <div class="row">
         <div class="col-4">

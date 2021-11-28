@@ -1,4 +1,4 @@
-@extends('profile.index')
+@extends('profile.index') 
 @section('profile')
 <div id="aboutme" class="tab-pane fade show active">
     <h3>My Address</h3>

@@ -11,6 +11,20 @@ class PetModel extends Model
     protected $table = 'user_pet';
     protected $primaryKey = 'petid';
 
+    protected $fillable = [
+        'userid',
+        'petname',
+        'animal',
+        'breed',
+        'color',
+        'birthday',
+        'gender',
+        'photo',
+        'created_at',
+        'updated_at',
+        'status'  
+    ];
+
     public function User()
     {
         //1 Data untuk 1 User
