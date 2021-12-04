@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\PetModel;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\ImageServiceProvider;
+use Carbon\Carbon;
 
 class PetController extends Controller
 {
@@ -16,13 +17,20 @@ class PetController extends Controller
     public function index ()
     {
         $pet_list = PetModel::with('user')->get();
-        return view('pet', ['title'=>"My Pet" ,'all_pet' => $pet_list]);
+        return view('mypet.pet', ['title'=>"My Pet" ,'all_pet' => $pet_list]);
     }
 
-    public function detail ()
+    public function detail ($petid)
     {
-        $pet_list = PetModel::with('user')->get();
-        return view('pet_detail', ['title'=>"My Pet" ,'all_pet' => $pet_list]);
+        $pet = PetModel::where('petid', $petid)->first();
+        $age = Carbon::parse($pet->date_birth)->diffInMonths(Carbon::now());
+        if($pet) {
+            $data = array('title' => "My Pet", 'pet' => $pet, 'age' => $age);
+            return view('mypet.detail', $data);
+        } else {
+            // kalo produk ga ada, jadinya tampil halaman tidak ditemukan (error 404)
+            return abort('404');
+        }
     }
 
     public function store(Request $request)
