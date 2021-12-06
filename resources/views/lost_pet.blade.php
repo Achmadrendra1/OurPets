@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-10">
 
-            <p>{{ Request::is('Lost/change') ? $place : $address }}</p>
+            <p>{{ Request::is('lost_pet/change') ? $place : $address }}</p>
 
         </div>
         <div class="col">
@@ -25,7 +25,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="{{ URL::to('Lost/change')  }}">
+                <form method="post" action="{{ URL::to('lost_pet/change')  }}">
                     @csrf
                     <div class="row">
                         <div class="col">

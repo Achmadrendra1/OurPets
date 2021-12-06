@@ -11,9 +11,15 @@
             <div class="card-body">
                 <h5 class="card-title"> {{ $pet-> petname }}</h5>
                 <small class="text-muted">
-                    Added On //Time Add
+                    Added On {{ \Carbon\Carbon::parse($pet->created_at)->diffForHumans() }} <br>
                 </small>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">
+                {{ $pet->animal }}    
+                <br>    
+                {{ \Carbon\Carbon::parse($pet->date_birth)->diffInMonths() }} Months
+                <br>
+                {{ $pet->color }}
+                </p>
                 <a href="{{ url('mypet/detail/'.$pet->petid) }}" class="btn btn-primary text-decoration-none">View More</a>
             </div>
         </div>

@@ -147,6 +147,14 @@ class ProfileController extends Controller
         return redirect('profile/address');
     }
 
+    public function default($user_loc)
+    {
+        //        
+        $data = request()->except(['_token']);
+        UserLocation::where('id', $user_loc)->update($data);
+        return redirect('profile/address');
+    }
+
     /**
      * Remove the specified resource from storage.
      *

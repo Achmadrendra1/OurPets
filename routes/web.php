@@ -53,6 +53,7 @@ Route::prefix('profile')->middleware('auth')->group(function () {
     Route::post('address/create', [ProfileController::class, 'store']);
     Route::get('address/destroy/{id}', [ProfileController::class ,'destroy']);
     Route::post('address/update/{id}', [ProfileController::class ,'update']);
+    Route::get('address/default/{id}', [ProfileController::class, 'default']);
     Route::get('address', [ProfileController::class, 'address']);
     Route::get('settings', [ProfileController::class, 'settings']);
     Route::post('settings/save', [ProfileController::class, 'changePassword']);
@@ -60,14 +61,16 @@ Route::prefix('profile')->middleware('auth')->group(function () {
 
 //Lost Pet
 Route::prefix('lost_pet')->middleware('auth')->group(function () {
-    Route::post('Lost/change', [LostPetController::class, 'store']);
+    Route::post('/change', [LostPetController::class, 'store']);
     Route::get('/', [LostPetController::class, 'index']);
 });
 
 
 //Adoption
-Route::get('Adopt', [AdoptionController::class, 'index']);
-Route::post('Adopt/change', [AdoptionController::class, 'store']);
+Route::prefix('Adopt')->middleware('auth')->group(function () {
+    Route::post('/change', [AdoptionController::class, 'store']);
+    Route::get('/', [AdoptionController::class, 'index']);
+});
 
 //Clinic
 Route::prefix('Clinic')->group(function () {

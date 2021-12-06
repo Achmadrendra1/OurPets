@@ -436,5 +436,12 @@ nav.clinic ul.clinic {
     line-height: 1.25;
 }
 
+table,
+th,
+td,
+tr {
+    border: 1px solid black;
+    
+}
 
 

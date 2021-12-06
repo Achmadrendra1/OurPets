@@ -21,10 +21,12 @@ class LostPetController extends Controller
         $user_loc = UserLocation::all();
         foreach ($user_loc as $loc)
         {
-            $address = $loc['loc_name'] ." : ". $loc['district'] . ", " . $loc['city'] . ", " . $loc['zipcode'];
+            if ($loc['status'] == 'Active') {
+            $address = $loc['loc_name'] ." : ". $loc['street'] . ", " . $loc['city'] . ", " . $loc['zipcode'];
             $long1 = $loc['longitude'];
             $lat1 = $loc['latitude'];
         }
+    }
         if (!isset($address)) {
             $loc = "Alamat Belum Ditambahkan";
         }
@@ -73,6 +75,8 @@ class LostPetController extends Controller
         foreach ($features as $value) {
             $place = $value['place_name'];
         }
+
+        
 
         return view('lost_pet', [
             'title' => 'Lost Pet',

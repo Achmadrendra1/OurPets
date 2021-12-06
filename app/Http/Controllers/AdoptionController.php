@@ -18,10 +18,14 @@ class AdoptionController extends Controller
         $long = $request->long;
         $lat = $request->lat;
         $user_loc = UserLocation::all();
+        
         foreach ($user_loc as $loc) {
-            $address = $loc['loc_name'] . " : " . $loc['district'] . ", " . $loc['city'] . ", " . $loc['zipcode'];
+            if ($loc['status'] == 'Active')
+            {
+            $address = $loc['loc_name'] . " : " . $loc['street'] . ", " . $loc['city'] . ", " . $loc['zipcode'];
             $long1 = $loc['longitude'];
             $lat1 = $loc['latitude'];
+            }
         }
         if (!isset($address)) {
             $loc = "Alamat Belum Ditambahkan";
